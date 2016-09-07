@@ -1,0 +1,310 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="1"] .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="1"] .cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-dpr="1"] img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+[data-dpr="1"] #form {
+  position: relative;
+  padding: 0.65rem 0.97rem 0rem 0.97rem;
+  z-index: 4;
+}
+[data-dpr="1"] .container {
+  margin-top: 0.15rem;
+}
+[data-dpr="1"] .container div {
+  border-bottom: 0.05rem solid #66b1d1;
+  font-size: 15px;
+  color: #e0dfdf;
+  padding-bottom: 0.27rem;
+  margin: 0.58rem 0;
+}
+[data-dpr="1"] .container div input {
+  background: none;
+  border: none;
+  color: white;
+  width: 6.41rem;
+  margin-left: 0.43rem;
+}
+[data-dpr="1"] .container div span {
+  margin-left: 0.43rem;
+  color: #e0dfdf;
+  font-size: 12px;
+}
+[data-dpr="1"] .container div select {
+  font-size: 12px;
+  border: 0.05rem solid #66b1d1;
+  width: 2.29rem;
+}
+[data-dpr="1"] .container div textarea {
+  background: none;
+  border: 0.1rem solid #66b1d1;
+  margin-left: 0.5rem;
+  width: 5.88rem;
+  height: 2.53rem;
+  color: white;
+  vertical-align: -1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+[data-dpr="1"] .reason {
+  border-bottom: none!important;
+}
+[data-dpr="1"] button {
+  width: 100%;
+  height: 1.32rem;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  background: #3b97d3;
+  border-radius: 0.1rem;
+  border: none;
+  position: relative;
+}
+[data-dpr="1"] h2 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+[data-dpr="1"] .iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="2"] .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="2"] .cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-dpr="2"] img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+[data-dpr="2"] #form {
+  position: relative;
+  padding: 0.65rem 0.97rem 0rem 0.97rem;
+  z-index: 4;
+}
+[data-dpr="2"] .container {
+  margin-top: 0.15rem;
+}
+[data-dpr="2"] .container div {
+  border-bottom: 0.05rem solid #66b1d1;
+  font-size: 30px;
+  color: #e0dfdf;
+  padding-bottom: 0.27rem;
+  margin: 0.58rem 0;
+}
+[data-dpr="2"] .container div input {
+  background: none;
+  border: none;
+  color: white;
+  width: 6.41rem;
+  margin-left: 0.43rem;
+}
+[data-dpr="2"] .container div span {
+  margin-left: 0.43rem;
+  color: #e0dfdf;
+  font-size: 24px;
+}
+[data-dpr="2"] .container div select {
+  font-size: 24px;
+  border: 0.05rem solid #66b1d1;
+  width: 2.29rem;
+}
+[data-dpr="2"] .container div textarea {
+  background: none;
+  border: 0.1rem solid #66b1d1;
+  margin-left: 0.5rem;
+  width: 5.88rem;
+  height: 2.53rem;
+  color: white;
+  vertical-align: -1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+[data-dpr="2"] .reason {
+  border-bottom: none!important;
+}
+[data-dpr="2"] button {
+  width: 100%;
+  height: 1.32rem;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-size: 48px;
+  background: #3b97d3;
+  border-radius: 0.1rem;
+  border: none;
+  position: relative;
+}
+[data-dpr="2"] h2 {
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+[data-dpr="2"] .iconfont {
+  font-family: "iconfont" !important;
+  font-size: 32px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="3"] .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="3"] .cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-dpr="3"] img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+[data-dpr="3"] #form {
+  position: relative;
+  padding: 0.65rem 0.97rem 0rem 0.97rem;
+  z-index: 4;
+}
+[data-dpr="3"] .container {
+  margin-top: 0.15rem;
+}
+[data-dpr="3"] .container div {
+  border-bottom: 0.05rem solid #66b1d1;
+  font-size: 45px;
+  color: #e0dfdf;
+  padding-bottom: 0.27rem;
+  margin: 0.58rem 0;
+}
+[data-dpr="3"] .container div input {
+  background: none;
+  border: none;
+  color: white;
+  width: 6.41rem;
+  margin-left: 0.43rem;
+}
+[data-dpr="3"] .container div span {
+  margin-left: 0.43rem;
+  color: #e0dfdf;
+  font-size: 36px;
+}
+[data-dpr="3"] .container div select {
+  font-size: 36px;
+  border: 0.05rem solid #66b1d1;
+  width: 2.29rem;
+}
+[data-dpr="3"] .container div textarea {
+  background: none;
+  border: 0.1rem solid #66b1d1;
+  margin-left: 0.5rem;
+  width: 5.88rem;
+  height: 2.53rem;
+  color: white;
+  vertical-align: -1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+[data-dpr="3"] .reason {
+  border-bottom: none!important;
+}
+[data-dpr="3"] button {
+  width: 100%;
+  height: 1.32rem;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-size: 72px;
+  background: #3b97d3;
+  border-radius: 0.1rem;
+  border: none;
+  position: relative;
+}
+[data-dpr="3"] h2 {
+  color: white;
+  font-size: 90px;
+  text-align: center;
+}
+[data-dpr="3"] .iconfont {
+  font-family: "iconfont" !important;
+  font-size: 48px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url('/fonts/iconfont.eot?t=1473240465');
+  /* IE9*/
+  src: url('/fonts/iconfont.eot?t=1473240465#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/fonts/iconfont.woff?t=1473240465') format('woff'), /* chrome, firefox */ url('/fonts/iconfont.ttf?t=1473240465') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('/fonts/iconfont.svg?t=1473240465#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.icon-yonghu:before {
+  content: "\e600";
+}
+.icon-phone:before {
+  content: "\e601";
+}
+.icon-banji:before {
+  content: "\e602";
+}
+.icon-weibiaoti110:before {
+  content: "\e603";
+}
+.icon-guanlishenqingxinxi2:before {
+  content: "\e604";
+}

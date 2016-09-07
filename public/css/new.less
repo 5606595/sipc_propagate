@@ -1,0 +1,782 @@
+.page-dpr(1);
+.page-dpr(2);
+.page-dpr(3);
+html {
+  height: 100%;
+}
+.page-dpr(@dpr) {
+  [data-dpr="@{dpr}"] {
+    @keyframes arrowing {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100%);
+        opacity: 0.5;
+      }
+    }
+    @-webkit-keyframes arrowing {
+      0% {
+        -webkit-transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateY(-100%);
+        opacity: 0.5;
+      }
+    }
+    @keyframes display {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes display {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    body {
+      height: 100%!important;
+    }
+    @font-face {
+      font-family: 'Bungee';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Bungee'), local('Bungee-Regular'), url('/fonts/bung.woff') format('woff');
+    }
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    #hj {
+      ///*display: none;*/
+      font-family: 'Bungee', sans-serif;
+      transition: opacity .5s linear;
+      -webkit-transition: opacity .5s linear;
+    }
+    #ship {
+      z-index: 2;
+    }
+
+    h1 {
+      position: fixed;
+      bottom: 1rem;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: #464b50;
+      padding: 0.3rem 0 0.2rem 0;
+      z-index: 7;
+      font-weight: 300;
+      font-size: 20px * @dpr;
+      background-color: white;
+      text-transform: uppercase;
+      border-radius: 0.1rem;
+      border-bottom: 0.1rem solid #bebebe;
+      /*-webkit-transition-duration: .25s;*/
+      /*transition-duration: .25s;*/
+      transition: all 3s ease-out;
+      -webkit-transition: all 3s ease-out;
+    }
+    .distance {
+      position: fixed;
+      top: 0.5rem;
+      right: 0.5rem;
+      font-size: 20px * @dpr;
+      padding: 0.5rem;
+      color: white;
+      z-index: 7;
+      /*transition: all 3s ease-out;*/
+      /*-webkit-transition: all 3s ease-out;*/
+    }
+    #container {
+      display: none;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Source-Han-Ligh38e2ea3865125;
+      transition: opacity .5s linear;
+      -webkit-transition: opacity .5s linear;
+    }
+    .pages {
+      width: 100%;
+      transition: all .2s linear;
+      -webkit-transition: all .2s linear;
+      &.drag {
+        transition: none!important;
+        -webkit-transition: none!important;
+      }
+      .bg1 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .bg1 img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .page {
+      width: 100%;
+      position: relative;
+    }
+    .text {
+      position: absolute;
+      img {
+        width: 100%;
+      }
+    }
+    .text1 {
+      left: 1.96rem;
+      top: 3.07rem;
+      width: 3.45rem;
+      //background: url('/imgs/zhao.png') no-repeat;
+      //background-position: 0px 0px;
+      //background-size: cover;
+    }
+    .text2 {
+      left: 4.87rem;
+      top: 3.07rem;
+      width: 3.45rem;
+    }
+    .text3 {
+      left: 1.96rem;
+      top: 6.12rem;
+      width: 3.45rem;
+    }
+    .text4 {
+      left: 4.87rem;
+      top: 6.12rem;
+      width: 3.45rem;
+    }
+    .text5 {
+      left: 3.04rem;
+      top: 1.61rem;
+      width: 5.36rem;
+    }
+    .text6 {
+      left: 3.55rem;
+      top: 2.11rem;
+      width: 4.29rem;
+    }
+    .text7 {
+      left: 1.76rem;
+      top: 1.33rem;
+      width: 1.8rem;
+    }
+    .text8 {
+      left: 6.7rem;
+      top: 0.87rem;
+      width: 2.17rem;
+    }
+    .text9 {
+      left: 1.27rem;
+      top: 9.31rem;
+      width: 6.97rem;
+    }
+    .text10 {
+      left: 3.19rem;
+      top: 10.52rem;
+      width: 3.67rem;
+    }
+    .text11 {
+      left: 1.03rem;
+      top: 2.25rem;
+      width: 8.45rem;
+    }
+    .text12 {
+      width: 3.77rem;
+      left: 3.17rem;
+      top: 11.68rem;
+    }
+    .text13 {
+      left: 1.52rem;
+      right: 1.52rem;
+      top: 3.25rem;
+      p {
+        line-height: 1.5;
+        color: rgb(1, 35, 52);
+        font-size: 12px * @dpr;
+        background: rgba(25, 25, 25, 0);
+        word-wrap: break-word;
+        text-indent: 0.63rem;
+        font-weight: 1000;
+      }
+    }
+    .text14 {
+      left: 1.03rem;
+      top: 0.85rem;
+      width: 2.17rem;
+    }
+    .text15 {
+      left: 2.72rem;
+      top: 0.65rem;
+      width: 6.24rem;
+    }
+    .text16 {
+      left: 1.59rem;
+      top: 6.47rem;
+      width: 6.64rem;
+    }
+    .text17 {
+      left: 0.83rem;
+      top: 0.47rem;
+      width: 0.8rem;
+    }
+    .text18 {
+      top: 13.89rem;
+      left: 8.39rem;
+      width: 0.8rem;
+      transform: rotate(180deg);
+    }
+    .text19 {
+      width: 0.08rem;
+      height: 13.32rem;
+      left: 1.29rem;
+      top: 0.95rem;
+      background: #012334;
+    }
+    .text20 {
+      width: 7.41rem;
+      height: 0.08rem;
+      left: 1.29rem;
+      top: 0.95rem;
+      background: #012334;
+    }
+    .text21 {
+      width: 0.08rem;
+      height: 13.32rem;
+      left: 8.68rem;
+      top: 0.95rem;
+      background: #012334;
+    }
+    .text22 {
+      width: 7.41rem;
+      height: 0.08rem;
+      left: 1.29rem;
+      top: 14.23rem;
+      background: #012334;
+    }
+    .text23 {
+      left: 2.19rem;
+      top: 1.64rem;
+      width: 6.03rem;
+    }
+    .text24 {
+      left: 1.91rem;
+      top: 3.31rem;
+      width: 6.35rem;
+      font-size: 13px * @dpr;
+      text-indent: 0.5rem;
+      line-height: 0.5rem;
+      color: #012334;
+    }
+    .text25 {
+      left: 5.53rem;
+      top: 0.61rem;
+      width: 5.87rem;
+    }
+    .text26 {
+      left: 5.35rem;
+      top: 4.17rem;
+      width: 4.09rem;
+      height: 5.03rem;
+      background: rgba(1, 35, 52, 0.5);
+    }
+    .text27 {
+      left: 0.68rem;
+      top: 2.31rem;
+      width: 4.09rem;
+      height: 5.03rem;
+      background: rgba(1, 35, 52, 0.5);
+    }
+    .text28 {
+      left: 6.68rem;
+      top: 2.37rem;
+      width: 4rem;
+      color: rgb(1, 35, 52);
+      font-size: 14px * @dpr;
+    }
+    .text29 {
+      left: 0.15rem;
+      right: 0.11rem;
+      top: 0.11rem;
+    }
+    .text30 {
+      left: 0.53rem;
+      top: 4.18rem;
+      width: 3.09rem;
+      font-size: 15px * @dpr;
+      font-weight: bold;
+      text-align: center;
+    }
+    .text31 {
+      left: 0.15rem;
+      right: 0.11rem;
+      top: 0.11rem;
+    }
+    .text32 {
+      left: 0.83rem;
+      top: 4.28rem;
+      width: 2.69rem;
+      font-size: 15px * @dpr;
+      font-weight: bold;
+      text-align: center;
+    }
+    .text33 {
+      left: 0.71rem;
+      top: 7.97rem;
+      width: 4.09rem;
+      height: 5.03rem;
+      background: rgba(1, 35, 52, 0.5);
+    }
+    .text34 {
+      left: 0.15rem;
+      right: 0.11rem;
+      top: 0.11rem;
+    }
+    .text35 {
+      left: 0.43rem;
+      top: 4.28rem;
+      width: 3.29rem;
+      font-size: 15px * @dpr;
+      font-weight: bold;
+      text-align: center;
+    }
+    .text36 {
+      left: 5.36rem;
+      top: 9.93rem;
+      width: 4.09rem;
+      height: 5.03rem;
+      background: rgba(1, 35, 52, 0.5);
+    }
+    .text37 {
+      left: 0.15rem;
+      right: 0.11rem;
+      top: 0.11rem;
+    }
+    .text38 {
+      left: 0.23rem;
+      top: 4.28rem;
+      width: 3.69rem;
+      font-size: 15px * @dpr;
+      font-weight: bold;
+      text-align: center;
+    }
+    .bg4 {
+      background: rgb(255, 222, 42);
+    }
+    .text39 {
+      left: 0.37rem;
+      top: 10.4rem;
+      width: 3.09rem;
+      height: 3.09rem;
+      border-radius: 3.09rem;
+      border: 0.17rem solid #012334;
+      overflow: hidden;
+    }
+    .text40 {
+      left: 5.67rem;
+      top: 7.05rem;
+      width: 4.03rem;
+      height: 4.03rem;
+      border-radius: 4.03rem;
+      border: 0.17rem solid #012334;
+      overflow: hidden;
+    }
+    .text41 {
+      left: 0.27rem;
+      top: 3.96rem;
+      width: 4.76rem;
+      height: 4.76rem;
+      border-radius: 4.76rem;
+      border: 0.17rem solid #012334;
+      overflow: hidden;
+    }
+    .text42 {
+      left: 6.47rem;
+      top: 3.17rem;
+      width: 2.73rem;
+      height: 2.73rem;
+      border-radius: 2.73rem;
+      border: 0.17rem solid #012334;
+      overflow: hidden;
+    }
+    .text43 {
+      div {
+        width: 3.23rem;
+        height: 0.13rem;
+        background: rgba(1, 35, 52, 0.5);
+      }
+      left: 3.06rem;
+      top: 10.72rem;
+      transform: rotate(152deg);
+      -webkit-transform: rotate(152deg);
+    }
+    .text44 {
+      div {
+        width: 1.63rem;
+        height: 0.13rem;
+        background: rgba(1, 35, 52, 0.5);
+      }
+      left: 4.56rem;
+      top: 7.62rem;
+      transform: rotate(205deg);
+      -webkit-transform: rotate(205deg);
+    }
+    .text45 {
+      div {
+        width: 2.03rem;
+        height: 0.13rem;
+        background: rgba(1, 35, 52, 0.5);
+      }
+      left: 4.56rem;
+      top: 4.92rem;
+      transform: rotate(161deg);
+      -webkit-transform: rotate(161deg);
+    }
+    .text46 {
+      left: 5.67rem;
+      top: 11.49rem;
+      width: 4.2rem;
+      text-align: center;
+      color: rgb(105, 105, 105);
+      font-size: 16px * @dpr;
+    }
+    .text47 {
+      left: 0.27rem;
+      top: 9.23rem;
+      width: 5.11rem;
+      text-align: center;
+      color: rgb(105, 105, 105);
+      font-size: 16px * @dpr;
+    }
+    .text48 {
+      left: 6.47rem;
+      top: 6.23rem;
+      width: 3.01rem;
+      text-align: center;
+      color: rgb(105, 105, 105);
+      font-size: 16px * @dpr;
+    }
+    .text49 {
+      left: 2.59rem;
+      top: 12.95rem;
+      width: 5.4rem;
+      color: rgb(105, 105, 105);
+      font-size: 16px * @dpr;
+    }
+    .text50 {
+      left: 0.72rem;
+      top: 1.69rem;
+      width: 6.3rem;
+      font-size: 24px * @dpr;
+    }
+    .text51 {
+      top: 4rem;
+    }
+    .text52 {
+      top: 6.5rem;
+    }
+    .text53 {
+      left: 1.08rem;
+      top: 9rem;
+      width: 7.85rem;
+    }
+    .text54 {
+      width: 6rem;
+      top: 9.35rem;
+      left: 2.2rem;
+    }
+    .text55 {
+      left: 0.6rem;
+      top: 1.68rem;
+      width: 4.09rem;
+    }
+    .text56 {
+      left: 6.65rem;
+      top: 1.45rem;
+      width: 2.28rem;
+    }
+    .bg2 {
+      background: #599ad2;
+    }
+    .up {
+      position: absolute;
+      bottom: 0.27rem;
+      left: 50%;
+      width: 0.66rem;
+      margin-left: -0.33rem;
+      animation: arrowing 1s linear;
+      -webkit-animation: arrowing 1s linear;
+      animation-direction: alternate;
+      -webkit-animation-direction: alternate;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      img {
+        width: 100%;
+      }
+    }
+    .aniDisplay {
+      .bg1 {
+        animation: display 800ms ease;
+        -webkit-animation: display 800ms ease;
+      }
+    }
+    .ani {
+      * {
+        animation-play-state: running;
+        -webkit-animation-play-state: running;
+      }
+      .text1 {
+        animation: expandOpen 1000ms ease 600ms both ;
+        -webkit-animation: expandOpen 1000ms ease 600ms both ;
+      }
+      .text2 {
+        animation: expandOpen 1000ms ease 1000ms both ;
+        -webkit-animation: expandOpen 1000ms ease 1000ms both ;
+      }
+      .text3 {
+        animation: expandOpen 1000ms ease 1500ms both ;
+        -webkit-animation: expandOpen 1000ms ease 1500ms both ;
+      }
+      .text4 {
+        animation: expandOpen 1000ms ease 2000ms both ;
+        -webkit-animation: expandOpen 1000ms ease 2000ms both ;
+      }
+      .text5 {
+        animation: rotateInDownLeft 1000ms ease 3000ms both ;
+        -webkit-animation: rotateInDownLeft 1000ms ease 3000ms both ;
+      }
+      .text6 {
+        animation: fadeIn 1000ms ease 3500ms both ;
+        -webkit-animation: fadeIn 1000ms ease 3500ms both ;
+      }
+      .text7 {
+        animation: fadeInLeft 1000ms ease 2500ms both ;
+        -webkit-animation: fadeInLeft 1000ms ease 2500ms both ;
+      }
+      .text8 {
+        animation: fadeInNormal 1000ms ease 5000ms both ;
+        -webkit-animation: fadeInNormal 1000ms ease 5000ms both ;
+      }
+      .text9 {
+        animation: fadeInDown 1000ms ease 4000ms both ;
+        -webkit-animation: fadeInDown 1000ms ease 4000ms both ;
+      }
+      .text11 {
+        animation: flipInY 1000ms ease 1500ms both ;
+        -webkit-animation: flipInY 1000ms ease 1500ms both ;
+      }
+      .text13 {
+        animation: zoomIn 1000ms ease 2500ms both ;
+        -webkit-animation: zoomIn 1000ms ease 2500ms both ;
+      }
+      .text14 {
+        animation: fadeInLeft 1000ms ease 1000ms both ;
+        -webkit-animation: fadeInLeft 1000ms ease 1000ms both ;
+      }
+      .text15 {
+        animation: expandOpen 1000ms ease 600ms both ;
+        -webkit-animation: expandOpen 1000ms ease 600ms both ;
+      }
+      .text16 {
+        animation: stretchRight 1000ms ease 3500ms both ;
+        -webkit-animation: stretchRight 1000ms ease 3500ms both ;
+      }
+      .text17 div {
+        animation: stretchRight 1500ms ease 200ms both ;
+        -webkit-animation: stretchRight 1500ms ease 2000ms both ;
+      }
+      .text18 div {
+        animation: stretchRight 1500ms ease 200ms both ;
+        -webkit-animation: stretchRight 1500ms ease 200ms both ;
+      }
+      .text19 {
+        animation: pullUp 500ms ease 2000ms both ;
+        -webkit-animation: pullUp 500ms ease 2000ms both ;
+      }
+      .text20 {
+        animation: stretchRight 500ms ease 500ms both ;
+        -webkit-animation: stretchRight 500ms ease 500ms both ;
+      }
+      .text21 {
+        animation: stretchLeft 500ms ease 1500ms both ;
+        -webkit-animation: stretchLeft 500ms ease 1500ms both ;
+      }
+      .text22 {
+        animation: pullDown 500ms ease 1000ms both ;
+        -webkit-animation: pullDown 500ms ease 1000ms both ;
+      }
+      .text23 {
+        animation: fadeInDown 500ms ease 2500ms both ;
+        -webkit-animation: fadeInDown 500ms ease 2500ms both ;
+      }
+      .text24 {
+        animation: fadeInDown 500ms ease 3000ms both ;
+        -webkit-animation: fadeInDown 500ms ease 3000ms both ;
+      }
+      .text25 {
+        animation: fadeInDown 1000ms ease 600ms both;
+        -webkit-animation: fadeInDown 1000ms ease 600ms both;
+      }
+      .text26 {
+        animation: fadeInDown 1500ms ease 2000ms both;
+        -webkit-animation: fadeInDown 1500ms ease 2000ms both;
+      }
+      .text27 {
+        animation: fadeInDown 1500ms ease 600ms both;
+        -webkit-animation: fadeInDown 1500ms ease 600ms both;
+      }
+      .text28 {
+        animation: fadeInDown 1000ms ease 1000ms both;
+        -webkit-animation: fadeInDown 1000ms ease 1000ms both;
+      }
+      .text29 {
+        animation: fadeInNormal 1000ms ease 1500ms both;
+        -webkit-animation: fadeInNormal 1000ms ease 1500ms both;
+      }
+      .text30 {
+        animation: fadeInDown 1500ms ease 1000ms both;
+        -webkit-animation: fadeInDown 1500ms ease 1000ms both;
+      }
+      .text31 {
+        animation: fadeInNormal 1000ms ease 3000ms both;
+        -webkit-animation: fadeInNormal 1000ms ease 3000ms both;
+      }
+      .text32 {
+        animation: fadeInDown 1500ms ease 2500ms both;
+        -webkit-animation: fadeInDown 1500ms ease 2500ms both;
+      }
+      .text33 {
+        animation: fadeInDown 1500ms ease 3500ms both;
+        -webkit-animation: fadeInDown 1500ms ease 3500ms both;
+      }
+      .text34 {
+        animation: fadeInNormal 1000ms ease 4500ms both;
+        -webkit-animation: fadeInNormal 1000ms ease 4500ms both;
+      }
+      .text35 {
+        animation: fadeInDown 1500ms ease 4000ms both;
+        -webkit-animation: fadeInDown 1500ms ease 4000ms both;
+      }
+      .text36 {
+        animation: fadeInDown 1000ms ease 5000ms both;
+        -webkit-animation: fadeInDown 1000ms ease 5000ms both;
+      }
+      .text37 {
+        animation: fadeInNormal 1000ms ease 6000ms both running;
+        -webkit-animation: fadeInNormal 1000ms ease 6000ms both running;
+      }
+      .text38 {
+        animation: fadeInDown 1000ms ease 5500ms both;
+        -webkit-animation: fadeInDown 1000ms ease 5500ms both;
+      }
+      .text39 {
+        animation: fadeIn 1000ms ease 2000ms both;
+        -webkit-animation: fadeIn 1000ms ease 2000ms both;
+        img {
+          animation: zoomIn 1000ms ease 2200ms both;
+          -webkit-animation: zoomIn 1000ms ease 2200ms both;
+        }
+      }
+      .text40 {
+        animation: fadeIn 1000ms ease 1600ms both;
+        -webkit-animation: fadeIn 1000ms ease 1600ms both;
+        img {
+          animation: zoomIn 1000ms ease 1600ms both;
+          -webkit-animation: zoomIn 1000ms ease 1600ms both;
+        }
+      }
+      .text41 {
+        animation: fadeIn 1000ms ease 1200ms both;
+        -webkit-animation: fadeIn 1000ms ease 1200ms both;
+        img {
+          animation: zoomIn 1000ms ease 1200ms both;
+          -webkit-animation: zoomIn 1000ms ease 1200ms both;
+        }
+      }
+      .text42 {
+        animation: fadeIn 1000ms ease 600ms both;
+        -webkit-animation: fadeIn 1000ms ease 600ms both;
+        img {
+          animation: zoomIn 1000ms ease 600ms both;
+          -webkit-animation: zoomIn 1000ms ease 600ms both;
+        }
+      }
+      .text43 div {
+        animation: stretchRight 1000ms ease 2000ms both;
+        -webkit-animation: stretchRight 1000ms ease 2000ms both;
+      }
+      .text44 div {
+        animation: stretchLeft 1000ms ease 1400ms both;
+        -webkit-animation: stretchLeft 1000ms ease 1400ms both;
+      }
+      .text45 div {
+        animation: stretchRight 1000ms ease 800ms both;
+        -webkit-animation: stretchRight 1000ms ease 800ms both;
+      }
+      .text46 {
+        animation: zoomIn 1000ms ease 2000ms both;
+        -webkit-animation: zoomIn 1000ms ease 2000ms both;
+      }
+      .text47 {
+        animation: zoomIn 1000ms ease 1428ms both;
+        -webkit-animation: zoomIn 1000ms ease 1428ms both;
+      }
+      .text48 {
+        animation: zoomIn 1000ms ease 1571ms both;
+        -webkit-animation: zoomIn 1000ms ease 1571ms both;
+      }
+      .text49 {
+        animation: zoomIn 1000ms ease 1785ms both;
+        -webkit-animation: zoomIn 1000ms ease 1785ms both;
+      }
+      .text50 {
+        animation: fadeInRight 1000ms ease 600ms both;
+        -webkit-animation: fadeInRight 1000ms ease 600ms both;
+      }
+      .text51 {
+        animation: slideRight 1000ms ease 500ms both;
+        -webkit-animation: slideRight 1000ms ease 500ms both;
+      }
+      .text52 {
+        animation: slideLeft 1000ms ease 1000ms both;
+        -webkit-animation: slideLeft 1000ms ease 1000ms both;
+      }
+      .text53 {
+        animation: fadeIn 1000ms ease 1500ms both;
+        -webkit-animation: fadeIn 1000ms ease 1500ms both;
+      }
+      .text54 {
+        animation: zoomIn 1000ms ease 2000ms both;
+        -webkit-animation: zoomIn 1000ms ease 2000ms both;
+      }
+      .text55 {
+        animation: fadeIn 1000ms ease 3000ms both;
+        -webkit-animation: fadeIn 1000ms ease 3000ms both;
+      }
+      .text56 {
+        animation: zoomInDown 1000ms ease 2500ms both;
+        -webkit-animation: zoomInDown 1000ms ease 2500ms both;
+      }
+    }
+  }
+}

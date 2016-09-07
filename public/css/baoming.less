@@ -1,0 +1,147 @@
+.page-dpr(1);
+.page-dpr(2);
+.page-dpr(3);
+.page-dpr(@dpr) {
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  [data-dpr="@{dpr}"] {
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.5)
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+
+    #form {
+      position: relative;
+      padding: 0.65rem 0.97rem 0rem 0.97rem;
+      z-index: 4;
+    }
+
+    .container {
+      margin-top: 0.15rem;
+    }
+
+    .container div {
+      border-bottom: 0.05rem solid #66b1d1;
+      font-size: 15px * @dpr;
+      color: #e0dfdf;
+      padding-bottom: 0.27rem;
+      margin: 0.58rem 0;
+    }
+
+    .container div input {
+      background: none;
+      border: none;
+      color: white;
+      width: 6.41rem;
+      margin-left: 0.43rem;
+    }
+
+    .container div span {
+      margin-left: 0.43rem;
+      color: #e0dfdf;
+      font-size: 12px * @dpr;
+    }
+
+    .container div select {
+      font-size: 12px * @dpr;
+      border: 0.05rem solid #66b1d1;
+      width: 2.29rem
+    }
+    .container div textarea {
+      background: none;
+      border: 0.1rem solid #66b1d1;
+      margin-left: 0.5rem;
+      width: 5.88rem;
+      height: 2.53rem;
+      color: white;
+      vertical-align: -1rem;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+    .reason {
+      border-bottom: none!important;
+    }
+    button {
+      width: 100%;
+      height: 1.32rem;
+      display: inline-block;
+      color: white;
+      text-align: center;
+      font-size: 24px * @dpr;
+      background: #3b97d3;
+      border-radius: 0.1rem;
+      border: none;
+      position: relative;
+    }
+    h2 {
+      color: white;
+      font-size: 30px * @dpr;
+      text-align: center;
+    }
+    .iconfont {
+      font-family: "iconfont" !important;
+      font-size: 16px * @dpr;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+}
+
+
+
+
+@font-face {
+  font-family: "iconfont";
+  src: url('/fonts/iconfont.eot?t=1473240465');
+  /* IE9*/
+  src: url('/fonts/iconfont.eot?t=1473240465#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/iconfont.woff?t=1473240465') format('woff'), /* chrome, firefox */
+  url('/fonts/iconfont.ttf?t=1473240465') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/fonts/iconfont.svg?t=1473240465#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+
+
+
+.icon-yonghu:before {
+  content: "\e600";
+}
+
+.icon-phone:before {
+  content: "\e601";
+}
+
+.icon-banji:before {
+  content: "\e602";
+}
+
+.icon-weibiaoti110:before {
+  content: "\e603";
+}
+
+.icon-guanlishenqingxinxi2:before {
+  content: "\e604";
+}

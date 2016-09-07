@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script>
+        /**
+         * Created by jorten on 16/9/5.
+         */
+        !function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("灏嗘牴鎹凡鏈夌殑meta鏍囩鏉ヨ缃缉鏀炬瘮渚�");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+    </script>
+    <meta charset="UTF-8">
+    <title>学生创新实践中心期待你的加入</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <style>
+        /*#hj {*/
+            /*display: none;*/
+        /*}*/
+        /*
+Svg Projects
+Author: Jonathan Trancozo
+Author_url: portfolio.jonathansilva.com.br/
+Social_networks: {
+  facebook: fb/jonathan.silva.web,
+  twitter: @jsilva_web
+}
+Language: HTML, CSS3 and SVG
+Project_version: V1
+Project_description:
+[pt-br]
+Por anos eu vi essa imagem e pensava “Isso ficaria bem massa animado” e hoje consegui expressar um pouco da minha imaginação.
+O desenho foi produzido no Adobe Illustrator e exportado em SVG. As animações foram feitas com CSS3 usando principalmente [transform].
+
+Até uma próxima.
+
+
+[en]
+For years I saw this picture and thought "That would be amazing animated " and today I managed to express some of my imagination.
+The design was produced in Adobe Illustrator and export in SVG . The animations were made with CSS3 using mainly [ transform ].
+
+See you.
+
+*/
+    </style>
+    <!--<link rel="stylesheet" href="/css/deadline.css">-->
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/new.css">
+</head>
+<body>
+    <div id="hj">
+        <h1>请不停触摸屏幕加速!</h1>
+        <div class="distance">
+            <div>
+                距离家:<span data-distance>0</span>km
+            </div>
+            <div>
+                速度: <span data-speed>0</span>km/s
+            </div>
+            <div>
+                距离SIPC:<span data-sipc>10000</span>km
+            </div>
+        </div>
+
+        <canvas id="ship"></canvas>
+        <canvas id="bg"></canvas>
+    </div>
+    <div id="container" data-page="1">
+        <div class="pages">
+            <div class="page page1 ani">
+                <div class="bg1">
+                    <img src="/imgs/bg1.jpg" alt="">
+                </div>
+                <div class="text1 text ani1">
+                    <img src="/imgs/zhao.png" alt="">
+                </div>
+                <div class="text2 text">
+                    <img src="/imgs/mu.png" alt="">
+                </div>
+                <div class="text3 text">
+                    <img src="/imgs/qi.png" alt="">
+                </div>
+                <div class="text4 text">
+                    <img src="/imgs/shi.png" alt="">
+                </div>
+                <div class="text5 text">
+                    <img src="/imgs/kuang.png" alt="">
+                </div>
+                <div class="text6 text">
+                    <img src="/imgs/want.png" alt="">
+                </div>
+                <div class="text7 text">
+                    <img src="/imgs/person.png" alt="">
+                </div>
+                <div class="text8 text">
+                    <img src="/imgs/sipc.png" alt="">
+                </div>
+                <div class="text9 text">
+                    <img src="/imgs/word.png" alt="">
+                </div>
+                <div class="text10 text">
+                    <img src="/imgs/jump.gif" alt="">
+                </div>
+            </div>
+            <div class="page">
+                <div class="bg1">
+                    <img src="/imgs/bg1.jpg" alt="">
+                </div>
+                <div class="text11 text">
+                    <img src="/imgs/border.png" alt="">
+                </div>
+                <div class="text12 text">
+                    <img src="/imgs/jump.gif" alt="">
+                </div>
+                <div class="text13 text">
+                    <p>
+                        学生创新实践中心(SIPC)是培养大学生科技创新意识,根据学生的特长与兴趣成立了ACM、前端开发、Android、PHP等兴趣小组，通过参加比赛、参与真实项目、专业培训不断提升学生专业水平的组织。
+                    </p>
+                </div>
+                <div class="text14 text">
+                    <img src="/imgs/letter.png" alt="">
+                </div>
+                <div class="text15 text">
+                    <img src="/imgs/about.png" alt="">
+                </div>
+                <div class="text16 text">
+                    <img src="/imgs/shuang.png" alt="">
+                </div>
+            </div>
+            <div class="page">
+                <div class="bg1">
+                    <img src="/imgs/bg1.jpg" alt="">
+                </div>
+                <div class="text17 text">
+                    <div>
+                        <img src="/imgs/leftUp.png" alt="">
+                    </div>
+                </div>
+                <div class="text18 text">
+                    <div>
+                        <img src="/imgs/leftUp.png" alt="">
+                    </div>
+                </div>
+                <div class="text19 text"></div>
+                <div class="text20 text"></div>
+                <div class="text21 text"></div>
+                <div class="text22 text"></div>
+                <div class="text23 text">
+                    <img src="/imgs/detail.png" alt="">
+                </div>
+                <div class="text24 text">
+                    <p>
+                        科技协会是学生创新实践中心下设部门。这里有丰富的资源和适合学技术的环境（你懂的，Wi-Fi空调and独立办公桌），无论你是技术大神只为提高境界，还是对技术一无所知渴望开拓新天地，科协都期待你的加入！科协会定期组织专业技术培训，举办高逼格比赛，在这里，你可以优雅地学习技术，更可以高冷地装逼！怀着你的梦想，迈向人生新高度！
+                    <p>
+                        另外我们也单独设立ACM集训队，代表学校参加各个赛区ACM竞赛，培养团队精神，创新能力，以及在压力下编写程序、分析和解决问题的能力，有一定编程基础且对ACM感兴趣的同学可以与学长们一起学习，共同进步。
+                    </p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="bg1">
+                    <img src="/imgs/bg1.jpg" alt="">
+                </div>
+                <div class="text25 text">
+                    <img src="/imgs/sipc_white.png" alt="">
+                </div>
+                <div class="text26 text">
+
+                    <div class="text31 text">
+                        <img src="/imgs/secure.jpg" alt="">
+                    </div>
+                    <div class="text32 text">
+                        <img src="/imgs/secure_word.png" alt="">
+                    </div>
+                </div>
+                <div class="text27 text">
+                    <div class="text29 text">
+                        <img src="/imgs/acm.jpg" alt="">
+                    </div>
+                    <div class="text30 text">
+                        <img src="/imgs/acm_word.png" alt="">
+                    </div>
+                </div>
+                <div class="text28 text">
+                    <img src="/imgs/huojiang.png" alt="">
+                </div>
+                <div class="text33 text">
+                    <div class="text34 text">
+                        <img src="/imgs/huabei.jpg" alt="">
+                    </div>
+                    <div class="text35 text">
+                        <img src="/imgs/north_word.png" alt="">
+                    </div>
+                </div>
+                <div class="text36 text">
+                    <div class="text37 text">
+                        <img src="/imgs/biancheng.jpg" alt="">
+                    </div>
+                    <div class="text38 text">
+                        <img src="/imgs/biancheng_word.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="bg1">
+                    <img src="/imgs/bg1.jpg" alt="">
+                </div>
+                <div class="text39 text">
+                    <img src="/imgs/competition.jpg" alt="">
+                </div>
+                <div class="text40 text">
+                    <img src="/imgs/peixun.jpg" alt="">
+                </div>
+                <div class="text41 text">
+                    <img src="/imgs/birthday.jpg" alt="">
+                </div>
+                <div class="text42 text">
+                    <img src="/imgs/out.jpg" alt="">
+                </div>
+                <div class="text43 text">
+                    <div></div>
+                </div>
+                <div class="text44 text">
+                    <div></div>
+                </div>
+                <div class="text45 text">
+                    <div></div>
+                </div>
+                <div class="text46 text">
+                    <img src="/imgs/peixun_word.png" alt="">
+                </div>
+                <div class="text47 text">
+                    <img src="/imgs/birthday_word.png" alt="">
+                </div>
+                <div class="text48 text">
+                    <img src="/imgs/out_word.png" alt="">
+                </div>
+                <div class="text49 text">
+                    <img src="/imgs/competition_word.png" alt="">
+                </div>
+                <div class="text50 text">
+                    <img src="/imgs/activity_word.png" alt="">
+                </div>
+            </div>
+            <div class="page">
+                <div class="bg1">
+                    <img src="/imgs/bg5.jpg" alt="">
+                </div>
+                <div class="text51 text">
+                    <img src="/imgs/youdan_word.png" alt="">
+                </div>
+                <div class="text52 text">
+                    <img src="/imgs/come_word.png" alt="">
+                </div>
+                <div class="text53 text">
+                    <img src="/imgs/yellow_bar.png" alt="">
+                </div>
+                <div class="text54 text">
+                    <img src="/imgs/first_word.png" alt="">
+                </div>
+                <div class="text55 text">
+                    <img src="/imgs/sipc_word.png" alt="">
+                </div>
+                <div class="text56 text">
+                    <img src="/imgs/lamp.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="up">
+            <img src="/imgs/up.png" alt="">
+        </div>
+    </div>
+</body>
+<script src="/js/jquery-3.1.0.min.js"></script>
+<script src="/js/hj.js"></script>
+<script src="/js/switch.js"></script>
+</html>
+
