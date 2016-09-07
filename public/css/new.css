@@ -1,0 +1,2289 @@
+@keyframes arrowing {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes arrowing {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    opacity: 0.5;
+  }
+}
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+[data-dpr="1"] body {
+  height: 100%!important;
+}
+@font-face {
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bungee'), local('Bungee-Regular'), url('/fonts/bung.woff') format('woff');
+}
+[data-dpr="1"] * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+[data-dpr="1"] canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+[data-dpr="1"] #hj {
+  font-family: 'Bungee', sans-serif;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+}
+[data-dpr="1"] #ship {
+  z-index: 2;
+}
+[data-dpr="1"] h1 {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #464b50;
+  padding: 0.3rem 0 0.2rem 0;
+  z-index: 7;
+  font-weight: 300;
+  font-size: 20px;
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 0.1rem;
+  border-bottom: 0.1rem solid #bebebe;
+  /*-webkit-transition-duration: .25s;*/
+  /*transition-duration: .25s;*/
+  transition: all 3s ease-out;
+  -webkit-transition: all 3s ease-out;
+}
+[data-dpr="1"] .distance {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 20px;
+  padding: 0.5rem;
+  color: white;
+  z-index: 7;
+  /*transition: all 3s ease-out;*/
+  /*-webkit-transition: all 3s ease-out;*/
+}
+[data-dpr="1"] #container {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Source-Han-Ligh38e2ea3865125;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+}
+[data-dpr="1"] .pages {
+  width: 100%;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+}
+[data-dpr="1"] .pages.drag {
+  transition: none!important;
+  -webkit-transition: none!important;
+}
+[data-dpr="1"] .pages .bg1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+[data-dpr="1"] .pages .bg1 img {
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="1"] .page {
+  width: 100%;
+  position: relative;
+}
+[data-dpr="1"] .text {
+  position: absolute;
+}
+[data-dpr="1"] .text img {
+  width: 100%;
+}
+[data-dpr="1"] .text1 {
+  left: 1.96rem;
+  top: 3.07rem;
+  width: 3.45rem;
+}
+[data-dpr="1"] .text2 {
+  left: 4.87rem;
+  top: 3.07rem;
+  width: 3.45rem;
+}
+[data-dpr="1"] .text3 {
+  left: 1.96rem;
+  top: 6.12rem;
+  width: 3.45rem;
+}
+[data-dpr="1"] .text4 {
+  left: 4.87rem;
+  top: 6.12rem;
+  width: 3.45rem;
+}
+[data-dpr="1"] .text5 {
+  left: 3.04rem;
+  top: 1.61rem;
+  width: 5.36rem;
+}
+[data-dpr="1"] .text6 {
+  left: 3.55rem;
+  top: 2.11rem;
+  width: 4.29rem;
+}
+[data-dpr="1"] .text7 {
+  left: 1.76rem;
+  top: 1.33rem;
+  width: 1.8rem;
+}
+[data-dpr="1"] .text8 {
+  left: 6.7rem;
+  top: 0.87rem;
+  width: 2.17rem;
+}
+[data-dpr="1"] .text9 {
+  left: 1.27rem;
+  top: 9.31rem;
+  width: 6.97rem;
+}
+[data-dpr="1"] .text10 {
+  left: 3.19rem;
+  top: 10.52rem;
+  width: 3.67rem;
+}
+[data-dpr="1"] .text11 {
+  left: 1.03rem;
+  top: 2.25rem;
+  width: 8.45rem;
+}
+[data-dpr="1"] .text12 {
+  width: 3.77rem;
+  left: 3.17rem;
+  top: 11.68rem;
+}
+[data-dpr="1"] .text13 {
+  left: 1.52rem;
+  right: 1.52rem;
+  top: 3.25rem;
+}
+[data-dpr="1"] .text13 p {
+  line-height: 1.5;
+  color: #012334;
+  font-size: 12px;
+  background: rgba(25, 25, 25, 0);
+  word-wrap: break-word;
+  text-indent: 0.63rem;
+  font-weight: 1000;
+}
+[data-dpr="1"] .text14 {
+  left: 1.03rem;
+  top: 0.85rem;
+  width: 2.17rem;
+}
+[data-dpr="1"] .text15 {
+  left: 2.72rem;
+  top: 0.65rem;
+  width: 6.24rem;
+}
+[data-dpr="1"] .text16 {
+  left: 1.59rem;
+  top: 6.47rem;
+  width: 6.64rem;
+}
+[data-dpr="1"] .text17 {
+  left: 0.83rem;
+  top: 0.47rem;
+  width: 0.8rem;
+}
+[data-dpr="1"] .text18 {
+  top: 13.89rem;
+  left: 8.39rem;
+  width: 0.8rem;
+  transform: rotate(180deg);
+}
+[data-dpr="1"] .text19 {
+  width: 0.08rem;
+  height: 13.32rem;
+  left: 1.29rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="1"] .text20 {
+  width: 7.41rem;
+  height: 0.08rem;
+  left: 1.29rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="1"] .text21 {
+  width: 0.08rem;
+  height: 13.32rem;
+  left: 8.68rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="1"] .text22 {
+  width: 7.41rem;
+  height: 0.08rem;
+  left: 1.29rem;
+  top: 14.23rem;
+  background: #012334;
+}
+[data-dpr="1"] .text23 {
+  left: 2.19rem;
+  top: 1.64rem;
+  width: 6.03rem;
+}
+[data-dpr="1"] .text24 {
+  left: 1.91rem;
+  top: 3.31rem;
+  width: 6.35rem;
+  font-size: 13px;
+  text-indent: 0.5rem;
+  line-height: 0.5rem;
+  color: #012334;
+}
+[data-dpr="1"] .text25 {
+  left: 5.53rem;
+  top: 0.61rem;
+  width: 5.87rem;
+}
+[data-dpr="1"] .text26 {
+  left: 5.35rem;
+  top: 4.17rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="1"] .text27 {
+  left: 0.68rem;
+  top: 2.31rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="1"] .text28 {
+  left: 6.68rem;
+  top: 2.37rem;
+  width: 4rem;
+  color: #012334;
+  font-size: 14px;
+}
+[data-dpr="1"] .text29 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="1"] .text30 {
+  left: 0.53rem;
+  top: 4.18rem;
+  width: 3.09rem;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="1"] .text31 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="1"] .text32 {
+  left: 0.83rem;
+  top: 4.28rem;
+  width: 2.69rem;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="1"] .text33 {
+  left: 0.71rem;
+  top: 7.97rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="1"] .text34 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="1"] .text35 {
+  left: 0.43rem;
+  top: 4.28rem;
+  width: 3.29rem;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="1"] .text36 {
+  left: 5.36rem;
+  top: 9.93rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="1"] .text37 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="1"] .text38 {
+  left: 0.23rem;
+  top: 4.28rem;
+  width: 3.69rem;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="1"] .bg4 {
+  background: #ffde2a;
+}
+[data-dpr="1"] .text39 {
+  left: 0.37rem;
+  top: 10.4rem;
+  width: 3.09rem;
+  height: 3.09rem;
+  border-radius: 3.09rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="1"] .text40 {
+  left: 5.67rem;
+  top: 7.05rem;
+  width: 4.03rem;
+  height: 4.03rem;
+  border-radius: 4.03rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="1"] .text41 {
+  left: 0.27rem;
+  top: 3.96rem;
+  width: 4.76rem;
+  height: 4.76rem;
+  border-radius: 4.76rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="1"] .text42 {
+  left: 6.47rem;
+  top: 3.17rem;
+  width: 2.73rem;
+  height: 2.73rem;
+  border-radius: 2.73rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="1"] .text43 {
+  left: 3.06rem;
+  top: 10.72rem;
+  transform: rotate(152deg);
+  -webkit-transform: rotate(152deg);
+}
+[data-dpr="1"] .text43 div {
+  width: 3.23rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="1"] .text44 {
+  left: 4.56rem;
+  top: 7.62rem;
+  transform: rotate(205deg);
+  -webkit-transform: rotate(205deg);
+}
+[data-dpr="1"] .text44 div {
+  width: 1.63rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="1"] .text45 {
+  left: 4.56rem;
+  top: 4.92rem;
+  transform: rotate(161deg);
+  -webkit-transform: rotate(161deg);
+}
+[data-dpr="1"] .text45 div {
+  width: 2.03rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="1"] .text46 {
+  left: 5.67rem;
+  top: 11.49rem;
+  width: 4.2rem;
+  text-align: center;
+  color: #696969;
+  font-size: 16px;
+}
+[data-dpr="1"] .text47 {
+  left: 0.27rem;
+  top: 9.23rem;
+  width: 5.11rem;
+  text-align: center;
+  color: #696969;
+  font-size: 16px;
+}
+[data-dpr="1"] .text48 {
+  left: 6.47rem;
+  top: 6.23rem;
+  width: 3.01rem;
+  text-align: center;
+  color: #696969;
+  font-size: 16px;
+}
+[data-dpr="1"] .text49 {
+  left: 2.59rem;
+  top: 12.95rem;
+  width: 5.4rem;
+  color: #696969;
+  font-size: 16px;
+}
+[data-dpr="1"] .text50 {
+  left: 0.72rem;
+  top: 1.69rem;
+  width: 6.3rem;
+  font-size: 24px;
+}
+[data-dpr="1"] .text51 {
+  top: 4rem;
+}
+[data-dpr="1"] .text52 {
+  top: 6.5rem;
+}
+[data-dpr="1"] .text53 {
+  left: 1.08rem;
+  top: 9rem;
+  width: 7.85rem;
+}
+[data-dpr="1"] .text54 {
+  width: 6rem;
+  top: 9.35rem;
+  left: 2.2rem;
+}
+[data-dpr="1"] .text55 {
+  left: 0.6rem;
+  top: 1.68rem;
+  width: 4.09rem;
+}
+[data-dpr="1"] .text56 {
+  left: 6.65rem;
+  top: 1.45rem;
+  width: 2.28rem;
+}
+[data-dpr="1"] .bg2 {
+  background: #599ad2;
+}
+[data-dpr="1"] .up {
+  position: absolute;
+  bottom: 0.27rem;
+  left: 50%;
+  width: 0.66rem;
+  margin-left: -0.33rem;
+  animation: arrowing 1s linear;
+  -webkit-animation: arrowing 1s linear;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+[data-dpr="1"] .up img {
+  width: 100%;
+}
+[data-dpr="1"] .aniDisplay .bg1 {
+  animation: display 800ms ease;
+  -webkit-animation: display 800ms ease;
+}
+[data-dpr="1"] .ani * {
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+}
+[data-dpr="1"] .ani .text1 {
+  animation: expandOpen 1000ms ease 600ms both ;
+  -webkit-animation: expandOpen 1000ms ease 600ms both ;
+}
+[data-dpr="1"] .ani .text2 {
+  animation: expandOpen 1000ms ease 1000ms both ;
+  -webkit-animation: expandOpen 1000ms ease 1000ms both ;
+}
+[data-dpr="1"] .ani .text3 {
+  animation: expandOpen 1000ms ease 1500ms both ;
+  -webkit-animation: expandOpen 1000ms ease 1500ms both ;
+}
+[data-dpr="1"] .ani .text4 {
+  animation: expandOpen 1000ms ease 2000ms both ;
+  -webkit-animation: expandOpen 1000ms ease 2000ms both ;
+}
+[data-dpr="1"] .ani .text5 {
+  animation: rotateInDownLeft 1000ms ease 3000ms both ;
+  -webkit-animation: rotateInDownLeft 1000ms ease 3000ms both ;
+}
+[data-dpr="1"] .ani .text6 {
+  animation: fadeIn 1000ms ease 3500ms both ;
+  -webkit-animation: fadeIn 1000ms ease 3500ms both ;
+}
+[data-dpr="1"] .ani .text7 {
+  animation: fadeInLeft 1000ms ease 2500ms both ;
+  -webkit-animation: fadeInLeft 1000ms ease 2500ms both ;
+}
+[data-dpr="1"] .ani .text8 {
+  animation: fadeInNormal 1000ms ease 5000ms both ;
+  -webkit-animation: fadeInNormal 1000ms ease 5000ms both ;
+}
+[data-dpr="1"] .ani .text9 {
+  animation: fadeInDown 1000ms ease 4000ms both ;
+  -webkit-animation: fadeInDown 1000ms ease 4000ms both ;
+}
+[data-dpr="1"] .ani .text11 {
+  animation: flipInY 1000ms ease 1500ms both ;
+  -webkit-animation: flipInY 1000ms ease 1500ms both ;
+}
+[data-dpr="1"] .ani .text13 {
+  animation: zoomIn 1000ms ease 2500ms both ;
+  -webkit-animation: zoomIn 1000ms ease 2500ms both ;
+}
+[data-dpr="1"] .ani .text14 {
+  animation: fadeInLeft 1000ms ease 1000ms both ;
+  -webkit-animation: fadeInLeft 1000ms ease 1000ms both ;
+}
+[data-dpr="1"] .ani .text15 {
+  animation: expandOpen 1000ms ease 600ms both ;
+  -webkit-animation: expandOpen 1000ms ease 600ms both ;
+}
+[data-dpr="1"] .ani .text16 {
+  animation: stretchRight 1000ms ease 3500ms both ;
+  -webkit-animation: stretchRight 1000ms ease 3500ms both ;
+}
+[data-dpr="1"] .ani .text17 div {
+  animation: stretchRight 1500ms ease 200ms both ;
+  -webkit-animation: stretchRight 1500ms ease 2000ms both ;
+}
+[data-dpr="1"] .ani .text18 div {
+  animation: stretchRight 1500ms ease 200ms both ;
+  -webkit-animation: stretchRight 1500ms ease 200ms both ;
+}
+[data-dpr="1"] .ani .text19 {
+  animation: pullUp 500ms ease 2000ms both ;
+  -webkit-animation: pullUp 500ms ease 2000ms both ;
+}
+[data-dpr="1"] .ani .text20 {
+  animation: stretchRight 500ms ease 500ms both ;
+  -webkit-animation: stretchRight 500ms ease 500ms both ;
+}
+[data-dpr="1"] .ani .text21 {
+  animation: stretchLeft 500ms ease 1500ms both ;
+  -webkit-animation: stretchLeft 500ms ease 1500ms both ;
+}
+[data-dpr="1"] .ani .text22 {
+  animation: pullDown 500ms ease 1000ms both ;
+  -webkit-animation: pullDown 500ms ease 1000ms both ;
+}
+[data-dpr="1"] .ani .text23 {
+  animation: fadeInDown 500ms ease 2500ms both ;
+  -webkit-animation: fadeInDown 500ms ease 2500ms both ;
+}
+[data-dpr="1"] .ani .text24 {
+  animation: fadeInDown 500ms ease 3000ms both ;
+  -webkit-animation: fadeInDown 500ms ease 3000ms both ;
+}
+[data-dpr="1"] .ani .text25 {
+  animation: fadeInDown 1000ms ease 600ms both;
+  -webkit-animation: fadeInDown 1000ms ease 600ms both;
+}
+[data-dpr="1"] .ani .text26 {
+  animation: fadeInDown 1500ms ease 2000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 2000ms both;
+}
+[data-dpr="1"] .ani .text27 {
+  animation: fadeInDown 1500ms ease 600ms both;
+  -webkit-animation: fadeInDown 1500ms ease 600ms both;
+}
+[data-dpr="1"] .ani .text28 {
+  animation: fadeInDown 1000ms ease 1000ms both;
+  -webkit-animation: fadeInDown 1000ms ease 1000ms both;
+}
+[data-dpr="1"] .ani .text29 {
+  animation: fadeInNormal 1000ms ease 1500ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 1500ms both;
+}
+[data-dpr="1"] .ani .text30 {
+  animation: fadeInDown 1500ms ease 1000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 1000ms both;
+}
+[data-dpr="1"] .ani .text31 {
+  animation: fadeInNormal 1000ms ease 3000ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 3000ms both;
+}
+[data-dpr="1"] .ani .text32 {
+  animation: fadeInDown 1500ms ease 2500ms both;
+  -webkit-animation: fadeInDown 1500ms ease 2500ms both;
+}
+[data-dpr="1"] .ani .text33 {
+  animation: fadeInDown 1500ms ease 3500ms both;
+  -webkit-animation: fadeInDown 1500ms ease 3500ms both;
+}
+[data-dpr="1"] .ani .text34 {
+  animation: fadeInNormal 1000ms ease 4500ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 4500ms both;
+}
+[data-dpr="1"] .ani .text35 {
+  animation: fadeInDown 1500ms ease 4000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 4000ms both;
+}
+[data-dpr="1"] .ani .text36 {
+  animation: fadeInDown 1000ms ease 5000ms both;
+  -webkit-animation: fadeInDown 1000ms ease 5000ms both;
+}
+[data-dpr="1"] .ani .text37 {
+  animation: fadeInNormal 1000ms ease 6000ms both running;
+  -webkit-animation: fadeInNormal 1000ms ease 6000ms both running;
+}
+[data-dpr="1"] .ani .text38 {
+  animation: fadeInDown 1000ms ease 5500ms both;
+  -webkit-animation: fadeInDown 1000ms ease 5500ms both;
+}
+[data-dpr="1"] .ani .text39 {
+  animation: fadeIn 1000ms ease 2000ms both;
+  -webkit-animation: fadeIn 1000ms ease 2000ms both;
+}
+[data-dpr="1"] .ani .text39 img {
+  animation: zoomIn 1000ms ease 2200ms both;
+  -webkit-animation: zoomIn 1000ms ease 2200ms both;
+}
+[data-dpr="1"] .ani .text40 {
+  animation: fadeIn 1000ms ease 1600ms both;
+  -webkit-animation: fadeIn 1000ms ease 1600ms both;
+}
+[data-dpr="1"] .ani .text40 img {
+  animation: zoomIn 1000ms ease 1600ms both;
+  -webkit-animation: zoomIn 1000ms ease 1600ms both;
+}
+[data-dpr="1"] .ani .text41 {
+  animation: fadeIn 1000ms ease 1200ms both;
+  -webkit-animation: fadeIn 1000ms ease 1200ms both;
+}
+[data-dpr="1"] .ani .text41 img {
+  animation: zoomIn 1000ms ease 1200ms both;
+  -webkit-animation: zoomIn 1000ms ease 1200ms both;
+}
+[data-dpr="1"] .ani .text42 {
+  animation: fadeIn 1000ms ease 600ms both;
+  -webkit-animation: fadeIn 1000ms ease 600ms both;
+}
+[data-dpr="1"] .ani .text42 img {
+  animation: zoomIn 1000ms ease 600ms both;
+  -webkit-animation: zoomIn 1000ms ease 600ms both;
+}
+[data-dpr="1"] .ani .text43 div {
+  animation: stretchRight 1000ms ease 2000ms both;
+  -webkit-animation: stretchRight 1000ms ease 2000ms both;
+}
+[data-dpr="1"] .ani .text44 div {
+  animation: stretchLeft 1000ms ease 1400ms both;
+  -webkit-animation: stretchLeft 1000ms ease 1400ms both;
+}
+[data-dpr="1"] .ani .text45 div {
+  animation: stretchRight 1000ms ease 800ms both;
+  -webkit-animation: stretchRight 1000ms ease 800ms both;
+}
+[data-dpr="1"] .ani .text46 {
+  animation: zoomIn 1000ms ease 2000ms both;
+  -webkit-animation: zoomIn 1000ms ease 2000ms both;
+}
+[data-dpr="1"] .ani .text47 {
+  animation: zoomIn 1000ms ease 1428ms both;
+  -webkit-animation: zoomIn 1000ms ease 1428ms both;
+}
+[data-dpr="1"] .ani .text48 {
+  animation: zoomIn 1000ms ease 1571ms both;
+  -webkit-animation: zoomIn 1000ms ease 1571ms both;
+}
+[data-dpr="1"] .ani .text49 {
+  animation: zoomIn 1000ms ease 1785ms both;
+  -webkit-animation: zoomIn 1000ms ease 1785ms both;
+}
+[data-dpr="1"] .ani .text50 {
+  animation: fadeInRight 1000ms ease 600ms both;
+  -webkit-animation: fadeInRight 1000ms ease 600ms both;
+}
+[data-dpr="1"] .ani .text51 {
+  animation: slideRight 1000ms ease 500ms both;
+  -webkit-animation: slideRight 1000ms ease 500ms both;
+}
+[data-dpr="1"] .ani .text52 {
+  animation: slideLeft 1000ms ease 1000ms both;
+  -webkit-animation: slideLeft 1000ms ease 1000ms both;
+}
+[data-dpr="1"] .ani .text53 {
+  animation: fadeIn 1000ms ease 1500ms both;
+  -webkit-animation: fadeIn 1000ms ease 1500ms both;
+}
+[data-dpr="1"] .ani .text54 {
+  animation: zoomIn 1000ms ease 2000ms both;
+  -webkit-animation: zoomIn 1000ms ease 2000ms both;
+}
+[data-dpr="1"] .ani .text55 {
+  animation: fadeIn 1000ms ease 3000ms both;
+  -webkit-animation: fadeIn 1000ms ease 3000ms both;
+}
+[data-dpr="1"] .ani .text56 {
+  animation: zoomInDown 1000ms ease 2500ms both;
+  -webkit-animation: zoomInDown 1000ms ease 2500ms both;
+}
+@keyframes arrowing {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes arrowing {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    opacity: 0.5;
+  }
+}
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+[data-dpr="2"] body {
+  height: 100%!important;
+}
+@font-face {
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bungee'), local('Bungee-Regular'), url('/fonts/bung.woff') format('woff');
+}
+[data-dpr="2"] * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+[data-dpr="2"] canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+[data-dpr="2"] #hj {
+  font-family: 'Bungee', sans-serif;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+}
+[data-dpr="2"] #ship {
+  z-index: 2;
+}
+[data-dpr="2"] h1 {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #464b50;
+  padding: 0.3rem 0 0.2rem 0;
+  z-index: 7;
+  font-weight: 300;
+  font-size: 40px;
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 0.1rem;
+  border-bottom: 0.1rem solid #bebebe;
+  /*-webkit-transition-duration: .25s;*/
+  /*transition-duration: .25s;*/
+  transition: all 3s ease-out;
+  -webkit-transition: all 3s ease-out;
+}
+[data-dpr="2"] .distance {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 40px;
+  padding: 0.5rem;
+  color: white;
+  z-index: 7;
+  /*transition: all 3s ease-out;*/
+  /*-webkit-transition: all 3s ease-out;*/
+}
+[data-dpr="2"] #container {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Source-Han-Ligh38e2ea3865125;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+}
+[data-dpr="2"] .pages {
+  width: 100%;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+}
+[data-dpr="2"] .pages.drag {
+  transition: none!important;
+  -webkit-transition: none!important;
+}
+[data-dpr="2"] .pages .bg1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+[data-dpr="2"] .pages .bg1 img {
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="2"] .page {
+  width: 100%;
+  position: relative;
+}
+[data-dpr="2"] .text {
+  position: absolute;
+}
+[data-dpr="2"] .text img {
+  width: 100%;
+}
+[data-dpr="2"] .text1 {
+  left: 1.96rem;
+  top: 3.07rem;
+  width: 3.45rem;
+}
+[data-dpr="2"] .text2 {
+  left: 4.87rem;
+  top: 3.07rem;
+  width: 3.45rem;
+}
+[data-dpr="2"] .text3 {
+  left: 1.96rem;
+  top: 6.12rem;
+  width: 3.45rem;
+}
+[data-dpr="2"] .text4 {
+  left: 4.87rem;
+  top: 6.12rem;
+  width: 3.45rem;
+}
+[data-dpr="2"] .text5 {
+  left: 3.04rem;
+  top: 1.61rem;
+  width: 5.36rem;
+}
+[data-dpr="2"] .text6 {
+  left: 3.55rem;
+  top: 2.11rem;
+  width: 4.29rem;
+}
+[data-dpr="2"] .text7 {
+  left: 1.76rem;
+  top: 1.33rem;
+  width: 1.8rem;
+}
+[data-dpr="2"] .text8 {
+  left: 6.7rem;
+  top: 0.87rem;
+  width: 2.17rem;
+}
+[data-dpr="2"] .text9 {
+  left: 1.27rem;
+  top: 9.31rem;
+  width: 6.97rem;
+}
+[data-dpr="2"] .text10 {
+  left: 3.19rem;
+  top: 10.52rem;
+  width: 3.67rem;
+}
+[data-dpr="2"] .text11 {
+  left: 1.03rem;
+  top: 2.25rem;
+  width: 8.45rem;
+}
+[data-dpr="2"] .text12 {
+  width: 3.77rem;
+  left: 3.17rem;
+  top: 11.68rem;
+}
+[data-dpr="2"] .text13 {
+  left: 1.52rem;
+  right: 1.52rem;
+  top: 3.25rem;
+}
+[data-dpr="2"] .text13 p {
+  line-height: 1.5;
+  color: #012334;
+  font-size: 24px;
+  background: rgba(25, 25, 25, 0);
+  word-wrap: break-word;
+  text-indent: 0.63rem;
+  font-weight: 1000;
+}
+[data-dpr="2"] .text14 {
+  left: 1.03rem;
+  top: 0.85rem;
+  width: 2.17rem;
+}
+[data-dpr="2"] .text15 {
+  left: 2.72rem;
+  top: 0.65rem;
+  width: 6.24rem;
+}
+[data-dpr="2"] .text16 {
+  left: 1.59rem;
+  top: 6.47rem;
+  width: 6.64rem;
+}
+[data-dpr="2"] .text17 {
+  left: 0.83rem;
+  top: 0.47rem;
+  width: 0.8rem;
+}
+[data-dpr="2"] .text18 {
+  top: 13.89rem;
+  left: 8.39rem;
+  width: 0.8rem;
+  transform: rotate(180deg);
+}
+[data-dpr="2"] .text19 {
+  width: 0.08rem;
+  height: 13.32rem;
+  left: 1.29rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="2"] .text20 {
+  width: 7.41rem;
+  height: 0.08rem;
+  left: 1.29rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="2"] .text21 {
+  width: 0.08rem;
+  height: 13.32rem;
+  left: 8.68rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="2"] .text22 {
+  width: 7.41rem;
+  height: 0.08rem;
+  left: 1.29rem;
+  top: 14.23rem;
+  background: #012334;
+}
+[data-dpr="2"] .text23 {
+  left: 2.19rem;
+  top: 1.64rem;
+  width: 6.03rem;
+}
+[data-dpr="2"] .text24 {
+  left: 1.91rem;
+  top: 3.31rem;
+  width: 6.35rem;
+  font-size: 26px;
+  text-indent: 0.5rem;
+  line-height: 0.5rem;
+  color: #012334;
+}
+[data-dpr="2"] .text25 {
+  left: 5.53rem;
+  top: 0.61rem;
+  width: 5.87rem;
+}
+[data-dpr="2"] .text26 {
+  left: 5.35rem;
+  top: 4.17rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="2"] .text27 {
+  left: 0.68rem;
+  top: 2.31rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="2"] .text28 {
+  left: 6.68rem;
+  top: 2.37rem;
+  width: 4rem;
+  color: #012334;
+  font-size: 28px;
+}
+[data-dpr="2"] .text29 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="2"] .text30 {
+  left: 0.53rem;
+  top: 4.18rem;
+  width: 3.09rem;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="2"] .text31 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="2"] .text32 {
+  left: 0.83rem;
+  top: 4.28rem;
+  width: 2.69rem;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="2"] .text33 {
+  left: 0.71rem;
+  top: 7.97rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="2"] .text34 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="2"] .text35 {
+  left: 0.43rem;
+  top: 4.28rem;
+  width: 3.29rem;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="2"] .text36 {
+  left: 5.36rem;
+  top: 9.93rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="2"] .text37 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="2"] .text38 {
+  left: 0.23rem;
+  top: 4.28rem;
+  width: 3.69rem;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="2"] .bg4 {
+  background: #ffde2a;
+}
+[data-dpr="2"] .text39 {
+  left: 0.37rem;
+  top: 10.4rem;
+  width: 3.09rem;
+  height: 3.09rem;
+  border-radius: 3.09rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="2"] .text40 {
+  left: 5.67rem;
+  top: 7.05rem;
+  width: 4.03rem;
+  height: 4.03rem;
+  border-radius: 4.03rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="2"] .text41 {
+  left: 0.27rem;
+  top: 3.96rem;
+  width: 4.76rem;
+  height: 4.76rem;
+  border-radius: 4.76rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="2"] .text42 {
+  left: 6.47rem;
+  top: 3.17rem;
+  width: 2.73rem;
+  height: 2.73rem;
+  border-radius: 2.73rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="2"] .text43 {
+  left: 3.06rem;
+  top: 10.72rem;
+  transform: rotate(152deg);
+  -webkit-transform: rotate(152deg);
+}
+[data-dpr="2"] .text43 div {
+  width: 3.23rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="2"] .text44 {
+  left: 4.56rem;
+  top: 7.62rem;
+  transform: rotate(205deg);
+  -webkit-transform: rotate(205deg);
+}
+[data-dpr="2"] .text44 div {
+  width: 1.63rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="2"] .text45 {
+  left: 4.56rem;
+  top: 4.92rem;
+  transform: rotate(161deg);
+  -webkit-transform: rotate(161deg);
+}
+[data-dpr="2"] .text45 div {
+  width: 2.03rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="2"] .text46 {
+  left: 5.67rem;
+  top: 11.49rem;
+  width: 4.2rem;
+  text-align: center;
+  color: #696969;
+  font-size: 32px;
+}
+[data-dpr="2"] .text47 {
+  left: 0.27rem;
+  top: 9.23rem;
+  width: 5.11rem;
+  text-align: center;
+  color: #696969;
+  font-size: 32px;
+}
+[data-dpr="2"] .text48 {
+  left: 6.47rem;
+  top: 6.23rem;
+  width: 3.01rem;
+  text-align: center;
+  color: #696969;
+  font-size: 32px;
+}
+[data-dpr="2"] .text49 {
+  left: 2.59rem;
+  top: 12.95rem;
+  width: 5.4rem;
+  color: #696969;
+  font-size: 32px;
+}
+[data-dpr="2"] .text50 {
+  left: 0.72rem;
+  top: 1.69rem;
+  width: 6.3rem;
+  font-size: 48px;
+}
+[data-dpr="2"] .text51 {
+  top: 4rem;
+}
+[data-dpr="2"] .text52 {
+  top: 6.5rem;
+}
+[data-dpr="2"] .text53 {
+  left: 1.08rem;
+  top: 9rem;
+  width: 7.85rem;
+}
+[data-dpr="2"] .text54 {
+  width: 6rem;
+  top: 9.35rem;
+  left: 2.2rem;
+}
+[data-dpr="2"] .text55 {
+  left: 0.6rem;
+  top: 1.68rem;
+  width: 4.09rem;
+}
+[data-dpr="2"] .text56 {
+  left: 6.65rem;
+  top: 1.45rem;
+  width: 2.28rem;
+}
+[data-dpr="2"] .bg2 {
+  background: #599ad2;
+}
+[data-dpr="2"] .up {
+  position: absolute;
+  bottom: 0.27rem;
+  left: 50%;
+  width: 0.66rem;
+  margin-left: -0.33rem;
+  animation: arrowing 1s linear;
+  -webkit-animation: arrowing 1s linear;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+[data-dpr="2"] .up img {
+  width: 100%;
+}
+[data-dpr="2"] .aniDisplay .bg1 {
+  animation: display 800ms ease;
+  -webkit-animation: display 800ms ease;
+}
+[data-dpr="2"] .ani * {
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+}
+[data-dpr="2"] .ani .text1 {
+  animation: expandOpen 1000ms ease 600ms both ;
+  -webkit-animation: expandOpen 1000ms ease 600ms both ;
+}
+[data-dpr="2"] .ani .text2 {
+  animation: expandOpen 1000ms ease 1000ms both ;
+  -webkit-animation: expandOpen 1000ms ease 1000ms both ;
+}
+[data-dpr="2"] .ani .text3 {
+  animation: expandOpen 1000ms ease 1500ms both ;
+  -webkit-animation: expandOpen 1000ms ease 1500ms both ;
+}
+[data-dpr="2"] .ani .text4 {
+  animation: expandOpen 1000ms ease 2000ms both ;
+  -webkit-animation: expandOpen 1000ms ease 2000ms both ;
+}
+[data-dpr="2"] .ani .text5 {
+  animation: rotateInDownLeft 1000ms ease 3000ms both ;
+  -webkit-animation: rotateInDownLeft 1000ms ease 3000ms both ;
+}
+[data-dpr="2"] .ani .text6 {
+  animation: fadeIn 1000ms ease 3500ms both ;
+  -webkit-animation: fadeIn 1000ms ease 3500ms both ;
+}
+[data-dpr="2"] .ani .text7 {
+  animation: fadeInLeft 1000ms ease 2500ms both ;
+  -webkit-animation: fadeInLeft 1000ms ease 2500ms both ;
+}
+[data-dpr="2"] .ani .text8 {
+  animation: fadeInNormal 1000ms ease 5000ms both ;
+  -webkit-animation: fadeInNormal 1000ms ease 5000ms both ;
+}
+[data-dpr="2"] .ani .text9 {
+  animation: fadeInDown 1000ms ease 4000ms both ;
+  -webkit-animation: fadeInDown 1000ms ease 4000ms both ;
+}
+[data-dpr="2"] .ani .text11 {
+  animation: flipInY 1000ms ease 1500ms both ;
+  -webkit-animation: flipInY 1000ms ease 1500ms both ;
+}
+[data-dpr="2"] .ani .text13 {
+  animation: zoomIn 1000ms ease 2500ms both ;
+  -webkit-animation: zoomIn 1000ms ease 2500ms both ;
+}
+[data-dpr="2"] .ani .text14 {
+  animation: fadeInLeft 1000ms ease 1000ms both ;
+  -webkit-animation: fadeInLeft 1000ms ease 1000ms both ;
+}
+[data-dpr="2"] .ani .text15 {
+  animation: expandOpen 1000ms ease 600ms both ;
+  -webkit-animation: expandOpen 1000ms ease 600ms both ;
+}
+[data-dpr="2"] .ani .text16 {
+  animation: stretchRight 1000ms ease 3500ms both ;
+  -webkit-animation: stretchRight 1000ms ease 3500ms both ;
+}
+[data-dpr="2"] .ani .text17 div {
+  animation: stretchRight 1500ms ease 200ms both ;
+  -webkit-animation: stretchRight 1500ms ease 2000ms both ;
+}
+[data-dpr="2"] .ani .text18 div {
+  animation: stretchRight 1500ms ease 200ms both ;
+  -webkit-animation: stretchRight 1500ms ease 200ms both ;
+}
+[data-dpr="2"] .ani .text19 {
+  animation: pullUp 500ms ease 2000ms both ;
+  -webkit-animation: pullUp 500ms ease 2000ms both ;
+}
+[data-dpr="2"] .ani .text20 {
+  animation: stretchRight 500ms ease 500ms both ;
+  -webkit-animation: stretchRight 500ms ease 500ms both ;
+}
+[data-dpr="2"] .ani .text21 {
+  animation: stretchLeft 500ms ease 1500ms both ;
+  -webkit-animation: stretchLeft 500ms ease 1500ms both ;
+}
+[data-dpr="2"] .ani .text22 {
+  animation: pullDown 500ms ease 1000ms both ;
+  -webkit-animation: pullDown 500ms ease 1000ms both ;
+}
+[data-dpr="2"] .ani .text23 {
+  animation: fadeInDown 500ms ease 2500ms both ;
+  -webkit-animation: fadeInDown 500ms ease 2500ms both ;
+}
+[data-dpr="2"] .ani .text24 {
+  animation: fadeInDown 500ms ease 3000ms both ;
+  -webkit-animation: fadeInDown 500ms ease 3000ms both ;
+}
+[data-dpr="2"] .ani .text25 {
+  animation: fadeInDown 1000ms ease 600ms both;
+  -webkit-animation: fadeInDown 1000ms ease 600ms both;
+}
+[data-dpr="2"] .ani .text26 {
+  animation: fadeInDown 1500ms ease 2000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 2000ms both;
+}
+[data-dpr="2"] .ani .text27 {
+  animation: fadeInDown 1500ms ease 600ms both;
+  -webkit-animation: fadeInDown 1500ms ease 600ms both;
+}
+[data-dpr="2"] .ani .text28 {
+  animation: fadeInDown 1000ms ease 1000ms both;
+  -webkit-animation: fadeInDown 1000ms ease 1000ms both;
+}
+[data-dpr="2"] .ani .text29 {
+  animation: fadeInNormal 1000ms ease 1500ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 1500ms both;
+}
+[data-dpr="2"] .ani .text30 {
+  animation: fadeInDown 1500ms ease 1000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 1000ms both;
+}
+[data-dpr="2"] .ani .text31 {
+  animation: fadeInNormal 1000ms ease 3000ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 3000ms both;
+}
+[data-dpr="2"] .ani .text32 {
+  animation: fadeInDown 1500ms ease 2500ms both;
+  -webkit-animation: fadeInDown 1500ms ease 2500ms both;
+}
+[data-dpr="2"] .ani .text33 {
+  animation: fadeInDown 1500ms ease 3500ms both;
+  -webkit-animation: fadeInDown 1500ms ease 3500ms both;
+}
+[data-dpr="2"] .ani .text34 {
+  animation: fadeInNormal 1000ms ease 4500ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 4500ms both;
+}
+[data-dpr="2"] .ani .text35 {
+  animation: fadeInDown 1500ms ease 4000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 4000ms both;
+}
+[data-dpr="2"] .ani .text36 {
+  animation: fadeInDown 1000ms ease 5000ms both;
+  -webkit-animation: fadeInDown 1000ms ease 5000ms both;
+}
+[data-dpr="2"] .ani .text37 {
+  animation: fadeInNormal 1000ms ease 6000ms both running;
+  -webkit-animation: fadeInNormal 1000ms ease 6000ms both running;
+}
+[data-dpr="2"] .ani .text38 {
+  animation: fadeInDown 1000ms ease 5500ms both;
+  -webkit-animation: fadeInDown 1000ms ease 5500ms both;
+}
+[data-dpr="2"] .ani .text39 {
+  animation: fadeIn 1000ms ease 2000ms both;
+  -webkit-animation: fadeIn 1000ms ease 2000ms both;
+}
+[data-dpr="2"] .ani .text39 img {
+  animation: zoomIn 1000ms ease 2200ms both;
+  -webkit-animation: zoomIn 1000ms ease 2200ms both;
+}
+[data-dpr="2"] .ani .text40 {
+  animation: fadeIn 1000ms ease 1600ms both;
+  -webkit-animation: fadeIn 1000ms ease 1600ms both;
+}
+[data-dpr="2"] .ani .text40 img {
+  animation: zoomIn 1000ms ease 1600ms both;
+  -webkit-animation: zoomIn 1000ms ease 1600ms both;
+}
+[data-dpr="2"] .ani .text41 {
+  animation: fadeIn 1000ms ease 1200ms both;
+  -webkit-animation: fadeIn 1000ms ease 1200ms both;
+}
+[data-dpr="2"] .ani .text41 img {
+  animation: zoomIn 1000ms ease 1200ms both;
+  -webkit-animation: zoomIn 1000ms ease 1200ms both;
+}
+[data-dpr="2"] .ani .text42 {
+  animation: fadeIn 1000ms ease 600ms both;
+  -webkit-animation: fadeIn 1000ms ease 600ms both;
+}
+[data-dpr="2"] .ani .text42 img {
+  animation: zoomIn 1000ms ease 600ms both;
+  -webkit-animation: zoomIn 1000ms ease 600ms both;
+}
+[data-dpr="2"] .ani .text43 div {
+  animation: stretchRight 1000ms ease 2000ms both;
+  -webkit-animation: stretchRight 1000ms ease 2000ms both;
+}
+[data-dpr="2"] .ani .text44 div {
+  animation: stretchLeft 1000ms ease 1400ms both;
+  -webkit-animation: stretchLeft 1000ms ease 1400ms both;
+}
+[data-dpr="2"] .ani .text45 div {
+  animation: stretchRight 1000ms ease 800ms both;
+  -webkit-animation: stretchRight 1000ms ease 800ms both;
+}
+[data-dpr="2"] .ani .text46 {
+  animation: zoomIn 1000ms ease 2000ms both;
+  -webkit-animation: zoomIn 1000ms ease 2000ms both;
+}
+[data-dpr="2"] .ani .text47 {
+  animation: zoomIn 1000ms ease 1428ms both;
+  -webkit-animation: zoomIn 1000ms ease 1428ms both;
+}
+[data-dpr="2"] .ani .text48 {
+  animation: zoomIn 1000ms ease 1571ms both;
+  -webkit-animation: zoomIn 1000ms ease 1571ms both;
+}
+[data-dpr="2"] .ani .text49 {
+  animation: zoomIn 1000ms ease 1785ms both;
+  -webkit-animation: zoomIn 1000ms ease 1785ms both;
+}
+[data-dpr="2"] .ani .text50 {
+  animation: fadeInRight 1000ms ease 600ms both;
+  -webkit-animation: fadeInRight 1000ms ease 600ms both;
+}
+[data-dpr="2"] .ani .text51 {
+  animation: slideRight 1000ms ease 500ms both;
+  -webkit-animation: slideRight 1000ms ease 500ms both;
+}
+[data-dpr="2"] .ani .text52 {
+  animation: slideLeft 1000ms ease 1000ms both;
+  -webkit-animation: slideLeft 1000ms ease 1000ms both;
+}
+[data-dpr="2"] .ani .text53 {
+  animation: fadeIn 1000ms ease 1500ms both;
+  -webkit-animation: fadeIn 1000ms ease 1500ms both;
+}
+[data-dpr="2"] .ani .text54 {
+  animation: zoomIn 1000ms ease 2000ms both;
+  -webkit-animation: zoomIn 1000ms ease 2000ms both;
+}
+[data-dpr="2"] .ani .text55 {
+  animation: fadeIn 1000ms ease 3000ms both;
+  -webkit-animation: fadeIn 1000ms ease 3000ms both;
+}
+[data-dpr="2"] .ani .text56 {
+  animation: zoomInDown 1000ms ease 2500ms both;
+  -webkit-animation: zoomInDown 1000ms ease 2500ms both;
+}
+@keyframes arrowing {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes arrowing {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    opacity: 0.5;
+  }
+}
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+[data-dpr="3"] body {
+  height: 100%!important;
+}
+@font-face {
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bungee'), local('Bungee-Regular'), url('/fonts/bung.woff') format('woff');
+}
+[data-dpr="3"] * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+[data-dpr="3"] canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+[data-dpr="3"] #hj {
+  font-family: 'Bungee', sans-serif;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+}
+[data-dpr="3"] #ship {
+  z-index: 2;
+}
+[data-dpr="3"] h1 {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #464b50;
+  padding: 0.3rem 0 0.2rem 0;
+  z-index: 7;
+  font-weight: 300;
+  font-size: 60px;
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 0.1rem;
+  border-bottom: 0.1rem solid #bebebe;
+  /*-webkit-transition-duration: .25s;*/
+  /*transition-duration: .25s;*/
+  transition: all 3s ease-out;
+  -webkit-transition: all 3s ease-out;
+}
+[data-dpr="3"] .distance {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 60px;
+  padding: 0.5rem;
+  color: white;
+  z-index: 7;
+  /*transition: all 3s ease-out;*/
+  /*-webkit-transition: all 3s ease-out;*/
+}
+[data-dpr="3"] #container {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Source-Han-Ligh38e2ea3865125;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+}
+[data-dpr="3"] .pages {
+  width: 100%;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+}
+[data-dpr="3"] .pages.drag {
+  transition: none!important;
+  -webkit-transition: none!important;
+}
+[data-dpr="3"] .pages .bg1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+[data-dpr="3"] .pages .bg1 img {
+  width: 100%;
+  height: 100%;
+}
+[data-dpr="3"] .page {
+  width: 100%;
+  position: relative;
+}
+[data-dpr="3"] .text {
+  position: absolute;
+}
+[data-dpr="3"] .text img {
+  width: 100%;
+}
+[data-dpr="3"] .text1 {
+  left: 1.96rem;
+  top: 3.07rem;
+  width: 3.45rem;
+}
+[data-dpr="3"] .text2 {
+  left: 4.87rem;
+  top: 3.07rem;
+  width: 3.45rem;
+}
+[data-dpr="3"] .text3 {
+  left: 1.96rem;
+  top: 6.12rem;
+  width: 3.45rem;
+}
+[data-dpr="3"] .text4 {
+  left: 4.87rem;
+  top: 6.12rem;
+  width: 3.45rem;
+}
+[data-dpr="3"] .text5 {
+  left: 3.04rem;
+  top: 1.61rem;
+  width: 5.36rem;
+}
+[data-dpr="3"] .text6 {
+  left: 3.55rem;
+  top: 2.11rem;
+  width: 4.29rem;
+}
+[data-dpr="3"] .text7 {
+  left: 1.76rem;
+  top: 1.33rem;
+  width: 1.8rem;
+}
+[data-dpr="3"] .text8 {
+  left: 6.7rem;
+  top: 0.87rem;
+  width: 2.17rem;
+}
+[data-dpr="3"] .text9 {
+  left: 1.27rem;
+  top: 9.31rem;
+  width: 6.97rem;
+}
+[data-dpr="3"] .text10 {
+  left: 3.19rem;
+  top: 10.52rem;
+  width: 3.67rem;
+}
+[data-dpr="3"] .text11 {
+  left: 1.03rem;
+  top: 2.25rem;
+  width: 8.45rem;
+}
+[data-dpr="3"] .text12 {
+  width: 3.77rem;
+  left: 3.17rem;
+  top: 11.68rem;
+}
+[data-dpr="3"] .text13 {
+  left: 1.52rem;
+  right: 1.52rem;
+  top: 3.25rem;
+}
+[data-dpr="3"] .text13 p {
+  line-height: 1.5;
+  color: #012334;
+  font-size: 36px;
+  background: rgba(25, 25, 25, 0);
+  word-wrap: break-word;
+  text-indent: 0.63rem;
+  font-weight: 1000;
+}
+[data-dpr="3"] .text14 {
+  left: 1.03rem;
+  top: 0.85rem;
+  width: 2.17rem;
+}
+[data-dpr="3"] .text15 {
+  left: 2.72rem;
+  top: 0.65rem;
+  width: 6.24rem;
+}
+[data-dpr="3"] .text16 {
+  left: 1.59rem;
+  top: 6.47rem;
+  width: 6.64rem;
+}
+[data-dpr="3"] .text17 {
+  left: 0.83rem;
+  top: 0.47rem;
+  width: 0.8rem;
+}
+[data-dpr="3"] .text18 {
+  top: 13.89rem;
+  left: 8.39rem;
+  width: 0.8rem;
+  transform: rotate(180deg);
+}
+[data-dpr="3"] .text19 {
+  width: 0.08rem;
+  height: 13.32rem;
+  left: 1.29rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="3"] .text20 {
+  width: 7.41rem;
+  height: 0.08rem;
+  left: 1.29rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="3"] .text21 {
+  width: 0.08rem;
+  height: 13.32rem;
+  left: 8.68rem;
+  top: 0.95rem;
+  background: #012334;
+}
+[data-dpr="3"] .text22 {
+  width: 7.41rem;
+  height: 0.08rem;
+  left: 1.29rem;
+  top: 14.23rem;
+  background: #012334;
+}
+[data-dpr="3"] .text23 {
+  left: 2.19rem;
+  top: 1.64rem;
+  width: 6.03rem;
+}
+[data-dpr="3"] .text24 {
+  left: 1.91rem;
+  top: 3.31rem;
+  width: 6.35rem;
+  font-size: 39px;
+  text-indent: 0.5rem;
+  line-height: 0.5rem;
+  color: #012334;
+}
+[data-dpr="3"] .text25 {
+  left: 5.53rem;
+  top: 0.61rem;
+  width: 5.87rem;
+}
+[data-dpr="3"] .text26 {
+  left: 5.35rem;
+  top: 4.17rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="3"] .text27 {
+  left: 0.68rem;
+  top: 2.31rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="3"] .text28 {
+  left: 6.68rem;
+  top: 2.37rem;
+  width: 4rem;
+  color: #012334;
+  font-size: 42px;
+}
+[data-dpr="3"] .text29 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="3"] .text30 {
+  left: 0.53rem;
+  top: 4.18rem;
+  width: 3.09rem;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="3"] .text31 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="3"] .text32 {
+  left: 0.83rem;
+  top: 4.28rem;
+  width: 2.69rem;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="3"] .text33 {
+  left: 0.71rem;
+  top: 7.97rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="3"] .text34 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="3"] .text35 {
+  left: 0.43rem;
+  top: 4.28rem;
+  width: 3.29rem;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="3"] .text36 {
+  left: 5.36rem;
+  top: 9.93rem;
+  width: 4.09rem;
+  height: 5.03rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="3"] .text37 {
+  left: 0.15rem;
+  right: 0.11rem;
+  top: 0.11rem;
+}
+[data-dpr="3"] .text38 {
+  left: 0.23rem;
+  top: 4.28rem;
+  width: 3.69rem;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+}
+[data-dpr="3"] .bg4 {
+  background: #ffde2a;
+}
+[data-dpr="3"] .text39 {
+  left: 0.37rem;
+  top: 10.4rem;
+  width: 3.09rem;
+  height: 3.09rem;
+  border-radius: 3.09rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="3"] .text40 {
+  left: 5.67rem;
+  top: 7.05rem;
+  width: 4.03rem;
+  height: 4.03rem;
+  border-radius: 4.03rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="3"] .text41 {
+  left: 0.27rem;
+  top: 3.96rem;
+  width: 4.76rem;
+  height: 4.76rem;
+  border-radius: 4.76rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="3"] .text42 {
+  left: 6.47rem;
+  top: 3.17rem;
+  width: 2.73rem;
+  height: 2.73rem;
+  border-radius: 2.73rem;
+  border: 0.17rem solid #012334;
+  overflow: hidden;
+}
+[data-dpr="3"] .text43 {
+  left: 3.06rem;
+  top: 10.72rem;
+  transform: rotate(152deg);
+  -webkit-transform: rotate(152deg);
+}
+[data-dpr="3"] .text43 div {
+  width: 3.23rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="3"] .text44 {
+  left: 4.56rem;
+  top: 7.62rem;
+  transform: rotate(205deg);
+  -webkit-transform: rotate(205deg);
+}
+[data-dpr="3"] .text44 div {
+  width: 1.63rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="3"] .text45 {
+  left: 4.56rem;
+  top: 4.92rem;
+  transform: rotate(161deg);
+  -webkit-transform: rotate(161deg);
+}
+[data-dpr="3"] .text45 div {
+  width: 2.03rem;
+  height: 0.13rem;
+  background: rgba(1, 35, 52, 0.5);
+}
+[data-dpr="3"] .text46 {
+  left: 5.67rem;
+  top: 11.49rem;
+  width: 4.2rem;
+  text-align: center;
+  color: #696969;
+  font-size: 48px;
+}
+[data-dpr="3"] .text47 {
+  left: 0.27rem;
+  top: 9.23rem;
+  width: 5.11rem;
+  text-align: center;
+  color: #696969;
+  font-size: 48px;
+}
+[data-dpr="3"] .text48 {
+  left: 6.47rem;
+  top: 6.23rem;
+  width: 3.01rem;
+  text-align: center;
+  color: #696969;
+  font-size: 48px;
+}
+[data-dpr="3"] .text49 {
+  left: 2.59rem;
+  top: 12.95rem;
+  width: 5.4rem;
+  color: #696969;
+  font-size: 48px;
+}
+[data-dpr="3"] .text50 {
+  left: 0.72rem;
+  top: 1.69rem;
+  width: 6.3rem;
+  font-size: 72px;
+}
+[data-dpr="3"] .text51 {
+  top: 4rem;
+}
+[data-dpr="3"] .text52 {
+  top: 6.5rem;
+}
+[data-dpr="3"] .text53 {
+  left: 1.08rem;
+  top: 9rem;
+  width: 7.85rem;
+}
+[data-dpr="3"] .text54 {
+  width: 6rem;
+  top: 9.35rem;
+  left: 2.2rem;
+}
+[data-dpr="3"] .text55 {
+  left: 0.6rem;
+  top: 1.68rem;
+  width: 4.09rem;
+}
+[data-dpr="3"] .text56 {
+  left: 6.65rem;
+  top: 1.45rem;
+  width: 2.28rem;
+}
+[data-dpr="3"] .bg2 {
+  background: #599ad2;
+}
+[data-dpr="3"] .up {
+  position: absolute;
+  bottom: 0.27rem;
+  left: 50%;
+  width: 0.66rem;
+  margin-left: -0.33rem;
+  animation: arrowing 1s linear;
+  -webkit-animation: arrowing 1s linear;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+[data-dpr="3"] .up img {
+  width: 100%;
+}
+[data-dpr="3"] .aniDisplay .bg1 {
+  animation: display 800ms ease;
+  -webkit-animation: display 800ms ease;
+}
+[data-dpr="3"] .ani * {
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+}
+[data-dpr="3"] .ani .text1 {
+  animation: expandOpen 1000ms ease 600ms both ;
+  -webkit-animation: expandOpen 1000ms ease 600ms both ;
+}
+[data-dpr="3"] .ani .text2 {
+  animation: expandOpen 1000ms ease 1000ms both ;
+  -webkit-animation: expandOpen 1000ms ease 1000ms both ;
+}
+[data-dpr="3"] .ani .text3 {
+  animation: expandOpen 1000ms ease 1500ms both ;
+  -webkit-animation: expandOpen 1000ms ease 1500ms both ;
+}
+[data-dpr="3"] .ani .text4 {
+  animation: expandOpen 1000ms ease 2000ms both ;
+  -webkit-animation: expandOpen 1000ms ease 2000ms both ;
+}
+[data-dpr="3"] .ani .text5 {
+  animation: rotateInDownLeft 1000ms ease 3000ms both ;
+  -webkit-animation: rotateInDownLeft 1000ms ease 3000ms both ;
+}
+[data-dpr="3"] .ani .text6 {
+  animation: fadeIn 1000ms ease 3500ms both ;
+  -webkit-animation: fadeIn 1000ms ease 3500ms both ;
+}
+[data-dpr="3"] .ani .text7 {
+  animation: fadeInLeft 1000ms ease 2500ms both ;
+  -webkit-animation: fadeInLeft 1000ms ease 2500ms both ;
+}
+[data-dpr="3"] .ani .text8 {
+  animation: fadeInNormal 1000ms ease 5000ms both ;
+  -webkit-animation: fadeInNormal 1000ms ease 5000ms both ;
+}
+[data-dpr="3"] .ani .text9 {
+  animation: fadeInDown 1000ms ease 4000ms both ;
+  -webkit-animation: fadeInDown 1000ms ease 4000ms both ;
+}
+[data-dpr="3"] .ani .text11 {
+  animation: flipInY 1000ms ease 1500ms both ;
+  -webkit-animation: flipInY 1000ms ease 1500ms both ;
+}
+[data-dpr="3"] .ani .text13 {
+  animation: zoomIn 1000ms ease 2500ms both ;
+  -webkit-animation: zoomIn 1000ms ease 2500ms both ;
+}
+[data-dpr="3"] .ani .text14 {
+  animation: fadeInLeft 1000ms ease 1000ms both ;
+  -webkit-animation: fadeInLeft 1000ms ease 1000ms both ;
+}
+[data-dpr="3"] .ani .text15 {
+  animation: expandOpen 1000ms ease 600ms both ;
+  -webkit-animation: expandOpen 1000ms ease 600ms both ;
+}
+[data-dpr="3"] .ani .text16 {
+  animation: stretchRight 1000ms ease 3500ms both ;
+  -webkit-animation: stretchRight 1000ms ease 3500ms both ;
+}
+[data-dpr="3"] .ani .text17 div {
+  animation: stretchRight 1500ms ease 200ms both ;
+  -webkit-animation: stretchRight 1500ms ease 2000ms both ;
+}
+[data-dpr="3"] .ani .text18 div {
+  animation: stretchRight 1500ms ease 200ms both ;
+  -webkit-animation: stretchRight 1500ms ease 200ms both ;
+}
+[data-dpr="3"] .ani .text19 {
+  animation: pullUp 500ms ease 2000ms both ;
+  -webkit-animation: pullUp 500ms ease 2000ms both ;
+}
+[data-dpr="3"] .ani .text20 {
+  animation: stretchRight 500ms ease 500ms both ;
+  -webkit-animation: stretchRight 500ms ease 500ms both ;
+}
+[data-dpr="3"] .ani .text21 {
+  animation: stretchLeft 500ms ease 1500ms both ;
+  -webkit-animation: stretchLeft 500ms ease 1500ms both ;
+}
+[data-dpr="3"] .ani .text22 {
+  animation: pullDown 500ms ease 1000ms both ;
+  -webkit-animation: pullDown 500ms ease 1000ms both ;
+}
+[data-dpr="3"] .ani .text23 {
+  animation: fadeInDown 500ms ease 2500ms both ;
+  -webkit-animation: fadeInDown 500ms ease 2500ms both ;
+}
+[data-dpr="3"] .ani .text24 {
+  animation: fadeInDown 500ms ease 3000ms both ;
+  -webkit-animation: fadeInDown 500ms ease 3000ms both ;
+}
+[data-dpr="3"] .ani .text25 {
+  animation: fadeInDown 1000ms ease 600ms both;
+  -webkit-animation: fadeInDown 1000ms ease 600ms both;
+}
+[data-dpr="3"] .ani .text26 {
+  animation: fadeInDown 1500ms ease 2000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 2000ms both;
+}
+[data-dpr="3"] .ani .text27 {
+  animation: fadeInDown 1500ms ease 600ms both;
+  -webkit-animation: fadeInDown 1500ms ease 600ms both;
+}
+[data-dpr="3"] .ani .text28 {
+  animation: fadeInDown 1000ms ease 1000ms both;
+  -webkit-animation: fadeInDown 1000ms ease 1000ms both;
+}
+[data-dpr="3"] .ani .text29 {
+  animation: fadeInNormal 1000ms ease 1500ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 1500ms both;
+}
+[data-dpr="3"] .ani .text30 {
+  animation: fadeInDown 1500ms ease 1000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 1000ms both;
+}
+[data-dpr="3"] .ani .text31 {
+  animation: fadeInNormal 1000ms ease 3000ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 3000ms both;
+}
+[data-dpr="3"] .ani .text32 {
+  animation: fadeInDown 1500ms ease 2500ms both;
+  -webkit-animation: fadeInDown 1500ms ease 2500ms both;
+}
+[data-dpr="3"] .ani .text33 {
+  animation: fadeInDown 1500ms ease 3500ms both;
+  -webkit-animation: fadeInDown 1500ms ease 3500ms both;
+}
+[data-dpr="3"] .ani .text34 {
+  animation: fadeInNormal 1000ms ease 4500ms both;
+  -webkit-animation: fadeInNormal 1000ms ease 4500ms both;
+}
+[data-dpr="3"] .ani .text35 {
+  animation: fadeInDown 1500ms ease 4000ms both;
+  -webkit-animation: fadeInDown 1500ms ease 4000ms both;
+}
+[data-dpr="3"] .ani .text36 {
+  animation: fadeInDown 1000ms ease 5000ms both;
+  -webkit-animation: fadeInDown 1000ms ease 5000ms both;
+}
+[data-dpr="3"] .ani .text37 {
+  animation: fadeInNormal 1000ms ease 6000ms both running;
+  -webkit-animation: fadeInNormal 1000ms ease 6000ms both running;
+}
+[data-dpr="3"] .ani .text38 {
+  animation: fadeInDown 1000ms ease 5500ms both;
+  -webkit-animation: fadeInDown 1000ms ease 5500ms both;
+}
+[data-dpr="3"] .ani .text39 {
+  animation: fadeIn 1000ms ease 2000ms both;
+  -webkit-animation: fadeIn 1000ms ease 2000ms both;
+}
+[data-dpr="3"] .ani .text39 img {
+  animation: zoomIn 1000ms ease 2200ms both;
+  -webkit-animation: zoomIn 1000ms ease 2200ms both;
+}
+[data-dpr="3"] .ani .text40 {
+  animation: fadeIn 1000ms ease 1600ms both;
+  -webkit-animation: fadeIn 1000ms ease 1600ms both;
+}
+[data-dpr="3"] .ani .text40 img {
+  animation: zoomIn 1000ms ease 1600ms both;
+  -webkit-animation: zoomIn 1000ms ease 1600ms both;
+}
+[data-dpr="3"] .ani .text41 {
+  animation: fadeIn 1000ms ease 1200ms both;
+  -webkit-animation: fadeIn 1000ms ease 1200ms both;
+}
+[data-dpr="3"] .ani .text41 img {
+  animation: zoomIn 1000ms ease 1200ms both;
+  -webkit-animation: zoomIn 1000ms ease 1200ms both;
+}
+[data-dpr="3"] .ani .text42 {
+  animation: fadeIn 1000ms ease 600ms both;
+  -webkit-animation: fadeIn 1000ms ease 600ms both;
+}
+[data-dpr="3"] .ani .text42 img {
+  animation: zoomIn 1000ms ease 600ms both;
+  -webkit-animation: zoomIn 1000ms ease 600ms both;
+}
+[data-dpr="3"] .ani .text43 div {
+  animation: stretchRight 1000ms ease 2000ms both;
+  -webkit-animation: stretchRight 1000ms ease 2000ms both;
+}
+[data-dpr="3"] .ani .text44 div {
+  animation: stretchLeft 1000ms ease 1400ms both;
+  -webkit-animation: stretchLeft 1000ms ease 1400ms both;
+}
+[data-dpr="3"] .ani .text45 div {
+  animation: stretchRight 1000ms ease 800ms both;
+  -webkit-animation: stretchRight 1000ms ease 800ms both;
+}
+[data-dpr="3"] .ani .text46 {
+  animation: zoomIn 1000ms ease 2000ms both;
+  -webkit-animation: zoomIn 1000ms ease 2000ms both;
+}
+[data-dpr="3"] .ani .text47 {
+  animation: zoomIn 1000ms ease 1428ms both;
+  -webkit-animation: zoomIn 1000ms ease 1428ms both;
+}
+[data-dpr="3"] .ani .text48 {
+  animation: zoomIn 1000ms ease 1571ms both;
+  -webkit-animation: zoomIn 1000ms ease 1571ms both;
+}
+[data-dpr="3"] .ani .text49 {
+  animation: zoomIn 1000ms ease 1785ms both;
+  -webkit-animation: zoomIn 1000ms ease 1785ms both;
+}
+[data-dpr="3"] .ani .text50 {
+  animation: fadeInRight 1000ms ease 600ms both;
+  -webkit-animation: fadeInRight 1000ms ease 600ms both;
+}
+[data-dpr="3"] .ani .text51 {
+  animation: slideRight 1000ms ease 500ms both;
+  -webkit-animation: slideRight 1000ms ease 500ms both;
+}
+[data-dpr="3"] .ani .text52 {
+  animation: slideLeft 1000ms ease 1000ms both;
+  -webkit-animation: slideLeft 1000ms ease 1000ms both;
+}
+[data-dpr="3"] .ani .text53 {
+  animation: fadeIn 1000ms ease 1500ms both;
+  -webkit-animation: fadeIn 1000ms ease 1500ms both;
+}
+[data-dpr="3"] .ani .text54 {
+  animation: zoomIn 1000ms ease 2000ms both;
+  -webkit-animation: zoomIn 1000ms ease 2000ms both;
+}
+[data-dpr="3"] .ani .text55 {
+  animation: fadeIn 1000ms ease 3000ms both;
+  -webkit-animation: fadeIn 1000ms ease 3000ms both;
+}
+[data-dpr="3"] .ani .text56 {
+  animation: zoomInDown 1000ms ease 2500ms both;
+  -webkit-animation: zoomInDown 1000ms ease 2500ms both;
+}
+html {
+  height: 100%;
+}
