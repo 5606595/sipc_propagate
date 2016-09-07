@@ -501,6 +501,59 @@
   top: 1.45rem;
   width: 2.28rem;
 }
+[data-dpr="1"] .text57 {
+  left: 1.27rem;
+  top: 2.56rem;
+  width: 7.8rem;
+}
+[data-dpr="1"] .text58 {
+  left: 2.09rem;
+  top: 4.74rem;
+  width: 6.23rem;
+}
+[data-dpr="1"] .text59 {
+  left: 2.55rem;
+  top: 6.77rem;
+  width: 4.85rem;
+  height: 0.1rem;
+  background: white;
+}
+[data-dpr="1"] .text60 {
+  left: 2.55rem;
+  top: 7.88rem;
+  width: 4.85rem;
+  height: 0.1rem;
+  background: white;
+}
+[data-dpr="1"] .text61 {
+  left: 2.53rem;
+  top: 7.12rem;
+  width: 5.05rem;
+}
+[data-dpr="1"] .text62 {
+  left: 2.69rem;
+  top: 9.13rem;
+  width: 4.87rem;
+  height: 1.13rem;
+  border: 0.05rem solid white;
+}
+[data-dpr="1"] .text63 {
+  left: 2.69rem;
+  top: 10.93rem;
+  width: 4.87rem;
+  height: 1.13rem;
+  border: 0.05rem solid white;
+}
+[data-dpr="1"] .text64 {
+  left: 0.26rem;
+  top: 0.25rem;
+  width: 4.31rem;
+}
+[data-dpr="1"] .text65 {
+  left: 0.15rem;
+  top: 0.02rem;
+  width: 4.73rem;
+}
 [data-dpr="1"] .bg2 {
   background: #599ad2;
 }
@@ -759,6 +812,42 @@
 [data-dpr="1"] .ani .text56 {
   animation: zoomInDown 1000ms ease 2500ms both;
   -webkit-animation: zoomInDown 1000ms ease 2500ms both;
+}
+[data-dpr="1"] .ani .text57 {
+  animation: slideDown 1000ms ease 500ms both;
+  -webkit-animation: slideDown 1000ms ease 500ms both;
+}
+[data-dpr="1"] .ani .text58 {
+  animation: slideUp 1000ms ease 1000ms both;
+  -webkit-animation: slideUp 1000ms ease 1000ms both;
+}
+[data-dpr="1"] .ani .text59 {
+  animation: slideRight 1000ms ease 1500ms both;
+  -webkit-animation: slideRight 1000ms ease 1500ms both;
+}
+[data-dpr="1"] .ani .text60 {
+  animation: slideLeft 1000ms ease 1500ms both;
+  -webkit-animation: slideLeft 1000ms ease 1500ms both;
+}
+[data-dpr="1"] .ani .text61 {
+  animation: fadeIn 1000ms ease 2000ms both;
+  -webkit-animation: fadeIn 1000ms ease 2000ms both;
+}
+[data-dpr="1"] .ani .text62 {
+  animation: flipInY 1000ms ease 2500ms both;
+  -webkit-animation: flipInY 1000ms ease 2500ms both;
+}
+[data-dpr="1"] .ani .text63 {
+  animation: flipInY 1000ms ease 3000ms both;
+  -webkit-animation: flipInY 1000ms ease 3000ms both;
+}
+[data-dpr="1"] .ani .text64 {
+  animation: zoomIn 1000ms ease 3500ms both;
+  -webkit-animation: zoomIn 1000ms ease 3500ms both;
+}
+[data-dpr="1"] .ani .text65 {
+  animation: zoomIn 1000ms ease 4000ms both;
+  -webkit-animation: zoomIn 1000ms ease 4000ms both;
 }
 @keyframes arrowing {
   0% {
@@ -1263,6 +1352,59 @@
   top: 1.45rem;
   width: 2.28rem;
 }
+[data-dpr="2"] .text57 {
+  left: 1.27rem;
+  top: 2.56rem;
+  width: 7.8rem;
+}
+[data-dpr="2"] .text58 {
+  left: 2.09rem;
+  top: 4.74rem;
+  width: 6.23rem;
+}
+[data-dpr="2"] .text59 {
+  left: 2.55rem;
+  top: 6.77rem;
+  width: 4.85rem;
+  height: 0.1rem;
+  background: white;
+}
+[data-dpr="2"] .text60 {
+  left: 2.55rem;
+  top: 7.88rem;
+  width: 4.85rem;
+  height: 0.1rem;
+  background: white;
+}
+[data-dpr="2"] .text61 {
+  left: 2.53rem;
+  top: 7.12rem;
+  width: 5.05rem;
+}
+[data-dpr="2"] .text62 {
+  left: 2.69rem;
+  top: 9.13rem;
+  width: 4.87rem;
+  height: 1.13rem;
+  border: 0.05rem solid white;
+}
+[data-dpr="2"] .text63 {
+  left: 2.69rem;
+  top: 10.93rem;
+  width: 4.87rem;
+  height: 1.13rem;
+  border: 0.05rem solid white;
+}
+[data-dpr="2"] .text64 {
+  left: 0.26rem;
+  top: 0.25rem;
+  width: 4.31rem;
+}
+[data-dpr="2"] .text65 {
+  left: 0.15rem;
+  top: 0.02rem;
+  width: 4.73rem;
+}
 [data-dpr="2"] .bg2 {
   background: #599ad2;
 }
@@ -1521,6 +1663,42 @@
 [data-dpr="2"] .ani .text56 {
   animation: zoomInDown 1000ms ease 2500ms both;
   -webkit-animation: zoomInDown 1000ms ease 2500ms both;
+}
+[data-dpr="2"] .ani .text57 {
+  animation: slideDown 1000ms ease 500ms both;
+  -webkit-animation: slideDown 1000ms ease 500ms both;
+}
+[data-dpr="2"] .ani .text58 {
+  animation: slideUp 1000ms ease 1000ms both;
+  -webkit-animation: slideUp 1000ms ease 1000ms both;
+}
+[data-dpr="2"] .ani .text59 {
+  animation: slideRight 1000ms ease 1500ms both;
+  -webkit-animation: slideRight 1000ms ease 1500ms both;
+}
+[data-dpr="2"] .ani .text60 {
+  animation: slideLeft 1000ms ease 1500ms both;
+  -webkit-animation: slideLeft 1000ms ease 1500ms both;
+}
+[data-dpr="2"] .ani .text61 {
+  animation: fadeIn 1000ms ease 2000ms both;
+  -webkit-animation: fadeIn 1000ms ease 2000ms both;
+}
+[data-dpr="2"] .ani .text62 {
+  animation: flipInY 1000ms ease 2500ms both;
+  -webkit-animation: flipInY 1000ms ease 2500ms both;
+}
+[data-dpr="2"] .ani .text63 {
+  animation: flipInY 1000ms ease 3000ms both;
+  -webkit-animation: flipInY 1000ms ease 3000ms both;
+}
+[data-dpr="2"] .ani .text64 {
+  animation: zoomIn 1000ms ease 3500ms both;
+  -webkit-animation: zoomIn 1000ms ease 3500ms both;
+}
+[data-dpr="2"] .ani .text65 {
+  animation: zoomIn 1000ms ease 4000ms both;
+  -webkit-animation: zoomIn 1000ms ease 4000ms both;
 }
 @keyframes arrowing {
   0% {
@@ -2025,6 +2203,59 @@
   top: 1.45rem;
   width: 2.28rem;
 }
+[data-dpr="3"] .text57 {
+  left: 1.27rem;
+  top: 2.56rem;
+  width: 7.8rem;
+}
+[data-dpr="3"] .text58 {
+  left: 2.09rem;
+  top: 4.74rem;
+  width: 6.23rem;
+}
+[data-dpr="3"] .text59 {
+  left: 2.55rem;
+  top: 6.77rem;
+  width: 4.85rem;
+  height: 0.1rem;
+  background: white;
+}
+[data-dpr="3"] .text60 {
+  left: 2.55rem;
+  top: 7.88rem;
+  width: 4.85rem;
+  height: 0.1rem;
+  background: white;
+}
+[data-dpr="3"] .text61 {
+  left: 2.53rem;
+  top: 7.12rem;
+  width: 5.05rem;
+}
+[data-dpr="3"] .text62 {
+  left: 2.69rem;
+  top: 9.13rem;
+  width: 4.87rem;
+  height: 1.13rem;
+  border: 0.05rem solid white;
+}
+[data-dpr="3"] .text63 {
+  left: 2.69rem;
+  top: 10.93rem;
+  width: 4.87rem;
+  height: 1.13rem;
+  border: 0.05rem solid white;
+}
+[data-dpr="3"] .text64 {
+  left: 0.26rem;
+  top: 0.25rem;
+  width: 4.31rem;
+}
+[data-dpr="3"] .text65 {
+  left: 0.15rem;
+  top: 0.02rem;
+  width: 4.73rem;
+}
 [data-dpr="3"] .bg2 {
   background: #599ad2;
 }
@@ -2283,6 +2514,42 @@
 [data-dpr="3"] .ani .text56 {
   animation: zoomInDown 1000ms ease 2500ms both;
   -webkit-animation: zoomInDown 1000ms ease 2500ms both;
+}
+[data-dpr="3"] .ani .text57 {
+  animation: slideDown 1000ms ease 500ms both;
+  -webkit-animation: slideDown 1000ms ease 500ms both;
+}
+[data-dpr="3"] .ani .text58 {
+  animation: slideUp 1000ms ease 1000ms both;
+  -webkit-animation: slideUp 1000ms ease 1000ms both;
+}
+[data-dpr="3"] .ani .text59 {
+  animation: slideRight 1000ms ease 1500ms both;
+  -webkit-animation: slideRight 1000ms ease 1500ms both;
+}
+[data-dpr="3"] .ani .text60 {
+  animation: slideLeft 1000ms ease 1500ms both;
+  -webkit-animation: slideLeft 1000ms ease 1500ms both;
+}
+[data-dpr="3"] .ani .text61 {
+  animation: fadeIn 1000ms ease 2000ms both;
+  -webkit-animation: fadeIn 1000ms ease 2000ms both;
+}
+[data-dpr="3"] .ani .text62 {
+  animation: flipInY 1000ms ease 2500ms both;
+  -webkit-animation: flipInY 1000ms ease 2500ms both;
+}
+[data-dpr="3"] .ani .text63 {
+  animation: flipInY 1000ms ease 3000ms both;
+  -webkit-animation: flipInY 1000ms ease 3000ms both;
+}
+[data-dpr="3"] .ani .text64 {
+  animation: zoomIn 1000ms ease 3500ms both;
+  -webkit-animation: zoomIn 1000ms ease 3500ms both;
+}
+[data-dpr="3"] .ani .text65 {
+  animation: zoomIn 1000ms ease 4000ms both;
+  -webkit-animation: zoomIn 1000ms ease 4000ms both;
 }
 html {
   height: 100%;

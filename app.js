@@ -12,6 +12,9 @@ app.get('/', (req, res) => {
 app.get('/baoming', (req, res) => {
     res.render('baoming')
 })
+app.get('/video', (req, res) => {
+    res.render('video');
+})
 
 app.listen(3000, () => {
     console.log('server start on port 3000');

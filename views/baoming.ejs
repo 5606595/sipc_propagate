@@ -83,7 +83,7 @@
 
         </div>
     </div>
-    <div id="form">
+    <form id="form">
         <h2>
             学生组织纳新
         </h2>
@@ -172,7 +172,7 @@
                 submit!
             </button>
         </div>
-    </div>
+    </form>
 </body>
 <script>
     var organization = {
@@ -201,7 +201,7 @@
             option1 = "<option value=''>请选择</option>"
         }
         second1.innerHTML = option1
-    })
+    }, false);
     first2.addEventListener("change", function(e) {
         num2 = e.target.value;
         if(num2) {
@@ -214,7 +214,33 @@
             option2 = "<option value=''>请选择</option>"
         }
         second2.innerHTML = option2
-    })
+    }, false);
+    var form = document.querySelector("#form")
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        var flag = 1;
+        var inputs = document.querySelectorAll("input");
+        for(var i = 0, j = inputs.length; i < j; i++) {
+            if(!inputs[i].value) {
+                flag = 0;
+            }
+        }
+        var text = document.querySelector("textarea");
+        if(!text.value) {
+            flag = 0;
+        }
+        var selects = document.querySelectorAll("select");
+        for(var i = 0, j = selects.length; i < j; i++) {
+            if(!selects[i].value) {
+                flag = 0;
+            }
+        }
+        if(flag) {
+            form.submit();
+        } else {
+            alert('填写信息不完整');
+        }
+    }, false)
 </script>
 
 </html>
