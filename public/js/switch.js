@@ -42,10 +42,12 @@
         $pageArr.eq(curPage).addClass('ani')
     }
     $pages.on('touchstart', function(e) {
+        e.preventDefault();   // 去除苹果手机滑动白页效果
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
     })
     $pages.on('touchmove', function(e) {
+        e.preventDefault();
         moveX = e.touches[0].clientX;
         moveY = e.touches[0].clientY;
         dx = moveX - startX;
@@ -71,6 +73,7 @@
         }
     })
     $pages.on('touchend', function(e) {
+        e.preventDefault();
         if(Math.abs(dy) > Math.abs(dx)) {
             if(dy >= 30) {
                 if(curPage > 0) {
